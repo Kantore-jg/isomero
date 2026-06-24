@@ -3,16 +3,20 @@ import { ref } from 'vue'
 import { siteData } from '@/data.js'
 
 const menuOpen = ref(false)
-const dropdownOpen = ref(false)
+const openDropdown = ref(null)
+
+function toggleDropdown(label) {
+  openDropdown.value = openDropdown.value === label ? null : label
+}
 
 function toggleMenu() {
   menuOpen.value = !menuOpen.value
-  if (!menuOpen.value) dropdownOpen.value = false
+  if (!menuOpen.value) openDropdown.value = null
 }
 
 function closeMenu() {
   menuOpen.value = false
-  dropdownOpen.value = false
+  openDropdown.value = null
 }
 </script>
 
@@ -44,16 +48,26 @@ function closeMenu() {
           >
             <template v-if="item.type === 'dropdown'">
               <button
+                type="button"
                 class="header__link header__link--dropdown"
-                :class="{ 'header__link--active': dropdownOpen }"
-                @click="dropdownOpen = !dropdownOpen"
+                :class="{ 'header__link--active': openDropdown === item.label }"
+                :aria-expanded="openDropdown === item.label"
+                @click="toggleDropdown(item.label)"
               >
                 {{ item.label }}
-                <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor">
+                <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true">
                   <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" />
                 </svg>
               </button>
-              <ul class="header__dropdown" :class="{ 'header__dropdown--open': dropdownOpen }">
+              <ul
+                class="header__dropdown"
+                :class="{ 'header__dropdown--open': openDropdown === item.label }"
+              >
+                <li v-if="item.to">
+                  <RouterLink :to="item.to" class="header__dropdown-link" @click="closeMenu">
+                    {{ item.overviewLabel || 'All Projects' }}
+                  </RouterLink>
+                </li>
                 <li v-for="child in item.children" :key="child.to">
                   <RouterLink :to="child.to" class="header__dropdown-link" @click="closeMenu">
                     {{ child.label }}
@@ -146,10 +160,15 @@ function closeMenu() {
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: var(--color-white);
   transition: color var(--transition);
   display: inline-flex;
   align-items: center;
   gap: 6px;
+}
+
+button.header__link {
+  color: var(--color-white);
 }
 
 .header__link:hover,
@@ -188,6 +207,15 @@ function closeMenu() {
 
 .header__item--dropdown {
   position: relative;
+}
+
+@media (min-width: 901px) {
+  .header__item--dropdown:hover .header__dropdown,
+  .header__item--dropdown:focus-within .header__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 }
 
 .header__dropdown-link {

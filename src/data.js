@@ -1,8 +1,3 @@
-/**
- * Fichier central de configuration du site.
- * Modifiez uniquement ce fichier pour mettre à jour le contenu.
- */
-
 export const siteData = {
   site: {
     name: 'Lusaka',
@@ -14,6 +9,8 @@ export const siteData = {
     {
       label: 'Projects',
       type: 'dropdown',
+      to: '/projects',
+      overviewLabel: 'All Projects',
       children: [
         { label: 'Materials for Learning', to: '/materials-for-learning' },
         { label: 'Education for Teachers', to: '/education-for-teachers' },
