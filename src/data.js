@@ -1,6 +1,6 @@
 export const siteData = {
   site: {
-    name: 'Lusaka',
+    name: 'Isomero',
     tagline: 'Empowering teachers and students for a brighter future.',
     description: 'Supporting education and innovation.',
   },
@@ -78,18 +78,18 @@ export const siteData = {
     testimonial: {
       theme: 'black',
       quote:
-        'With the support from Lusaka, we have been able to serve our students better than ever.',
-      author: 'Alonzo F.',
-      role: 'School Principal',
+        "With the support of Y'all, Isomero we're able to serve and to give the world our knowledge",
+      author: 'Isomero Team',
+      role: 'Principal Rule',
     },
 
     contact: {
       theme: 'light',
       title: 'Contact',
       subtitle: 'Feel free to contact us with any questions.',
-      email: 'email@example.com',
-      phone: '(555) 555-5555',
-      address: '123 Demo Street\nNew York, NY 12345',
+      email: 'isomerobi@gmail.com',
+      phone: '67908378',
+      address: 'Rohero, No 12345',
       form: {
         fields: [
           { name: 'name', label: 'Name', type: 'text', required: true },
@@ -191,14 +191,22 @@ export const siteData = {
       image:
         'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80',
     },
-    paragraphs: [
-      'Use this page to describe your company\'s mission and goals. Nullam tempor dolor sed nulla auctor, nec placerat felis sodales. Etiam et turpis mattis, efficitur mi ut, ultrices diam. Donec consectetur, lorem eget bibendum sodales, augue velit cursus nunc.',
-      'Sit amet fringilla nisi mollis eget. Sed a eros nec leo euismod eleifend sit amet ut nisl blandit. Sed a eros nec leo euismod eleifend sit amet ut nisl. Nullam tempor dolor sed nulla auctor, nec placerat felis sodales.',
-    ],
+    paragraphs : [
+    "ISOMERO BI TECHNOLOGIES est une entreprise spécialisée dans les technologies de l’information "+
+    "et de la communication (TIC). Elle offre des services informatiques de pointe, des solutions "+
+    "numériques innovantes, ainsi que des activités d’enseignement et de formation professionnelle.,"+
+    "Ses activités principales s'articulent autour de plusieurs axes majeurs : les solutions numériques, "+
+    "les infrastructures techniques, le commerce d'équipements et la formation professionnelle.,"+
+    
+    "Développement de logiciels et d’applications web et mobiles ; "+
+    "Conception, maintenance et administration des systèmes et réseaux informatiques ; "+
+    "Vente et fourniture d’équipements technologiques et de laboratoires ; "+
+    "Enseignement, formation et accompagnement en transformation digitale."
+],
     quote: {
       text: 'Education is the most powerful weapon which you can use to change the world.',
-      author: 'Simone Lemoniere',
-      role: 'Executive Director, Mentor',
+      author: 'Master of Scientist',
+      role: ' Mentor',
     },
     cta: { label: 'Donate', to: '/donate' },
   },
@@ -212,29 +220,29 @@ export const siteData = {
         role: 'Executive Director',
         bio: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
         image:
-          'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
+          'https://avatars.githubusercontent.com/u/189913060?v=4&size=64',
       },
       {
         name: 'First Name Last Name',
         role: 'Program Director',
         bio: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
         image:
-          'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80',
+          'https://media.licdn.com/dms/image/v2/D5603AQGeVXGeEAcxYw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1726721792103?e=1784160000&v=beta&t=bcYGN_OaSdGdUaSuzyMCnLGFA9ZOoVhY7U46ikKQ7iQ',
       },
       {
         name: 'First Name Last Name',
         role: 'Community Lead',
         bio: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
         image:
-          'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80',
+          'https://media.licdn.com/dms/image/v2/D5603AQGY7wqzMZFulg/profile-displayphoto-shrink_800_800/B56ZSSs8hLHwAg-/0/1737628044457?e=1784160000&v=beta&t=mw8CDyxIbFpG2nwCOzPpvlnGXvFM3bAJo3JXVbmjyGs',
       },
-      {
-        name: 'First Name Last Name',
-        role: 'Operations Manager',
-        bio: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
-        image:
-          'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80',
-      },
+      // {
+      //   name: 'First Name Last Name',
+      //   role: 'Operations Manager',
+      //   bio: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
+      //   image:
+      //     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80',
+      // },
     ],
   },
 
@@ -305,8 +313,8 @@ export const siteData = {
   },
 
   footer: {
-    organization: 'The Lusaka Foundation',
-    location: 'New York, NY 12345',
+    organization: 'The Isomero Foundation',
+    location: 'Rohero, No 13',
     links: [
       { label: 'Materials for Learning', to: '/materials-for-learning' },
       { label: 'Education for Teachers', to: '/education-for-teachers' },
