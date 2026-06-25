@@ -119,9 +119,14 @@ export const siteData = {
           text: 'All materials we create are shared openly so schools everywhere can adapt and use them freely.',
         },
         {
-          title: 'youtube video',
-          videoURL: 'https://youtu.be/nJsaxe18D9I?si=N9fnu_AI4IzD25At',
-        }
+          title: 'Program Video',
+          videoURL: 'https://youtu.be/8x8-o5UUhow?si=nC_dp3wXw51rHBU3',
+          videoURL: 'https://ik.imagekit.io/cy3dy3vcm/Isomero/arduino/VID_20260529_152614.mp4',
+        },
+        {
+          title: 'Program Video',
+          videoURL: 'https://youtu.be/8x8-o5UUhow?si=nC_dp3wXw51rHBU3',
+        },
       ],
     },
     'education-for-teachers': {
