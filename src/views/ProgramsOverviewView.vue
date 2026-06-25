@@ -1,29 +1,29 @@
 <script setup>
 import { siteData } from '@/data.js'
 
-const { projects } = siteData
+const { programsOverview } = siteData
 </script>
 
 <template>
   <div>
     <section
       class="page-hero"
-      :style="{ backgroundImage: `url(${projects.heroImage})` }"
+      :style="{ backgroundImage: `url(${programsOverview.heroImage})` }"
     >
       <div class="container">
-        <h1>{{ projects.title }}</h1>
+        <h1>{{ programsOverview.title }}</h1>
       </div>
     </section>
 
     <section class="section section--white">
       <div class="container">
-        <p class="projects__intro section-text">{{ projects.description }}</p>
-        <div class="projects__grid">
+        <p class="programs-overview__intro section-text">{{ programsOverview.description }}</p>
+        <div class="programs-overview__grid">
           <RouterLink
-            v-for="item in projects.items"
+            v-for="item in programsOverview.items"
             :key="item.to"
             :to="item.to"
-            class="project-card"
+            class="program-card"
           >
             <img :src="item.image" :alt="item.title" loading="lazy" />
             <h3>{{ item.title }}</h3>
@@ -35,43 +35,43 @@ const { projects } = siteData
 </template>
 
 <style scoped>
-.projects__intro {
+.programs-overview__intro {
   margin-bottom: 3rem;
   font-size: 1.125rem;
 }
 
-.projects__grid {
+.programs-overview__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(24px, 4vw, 48px);
 }
 
-.project-card {
+.program-card {
   transition: transform var(--transition);
 }
 
-.project-card:hover {
+.program-card:hover {
   transform: translateY(-4px);
 }
 
-.project-card img {
+.program-card img {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
   margin-bottom: 1rem;
 }
 
-.project-card h3 {
+.program-card h3 {
   font-size: 1.125rem;
   transition: color var(--transition);
 }
 
-.project-card:hover h3 {
+.program-card:hover h3 {
   color: var(--color-accent);
 }
 
 @media (max-width: 768px) {
-  .projects__grid {
+  .programs-overview__grid {
     grid-template-columns: 1fr;
   }
 }

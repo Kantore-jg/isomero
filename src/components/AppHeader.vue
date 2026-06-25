@@ -65,7 +65,7 @@ function closeMenu() {
               >
                 <li v-if="item.to">
                   <RouterLink :to="item.to" class="header__dropdown-link" @click="closeMenu">
-                    {{ item.overviewLabel || 'All Projects' }}
+                    {{ item.overviewLabel || 'All Programs' }}
                   </RouterLink>
                 </li>
                 <li v-for="child in item.children" :key="child.to">

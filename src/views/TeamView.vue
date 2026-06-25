@@ -17,10 +17,12 @@ const { team } = siteData
       <div class="container">
         <div class="team__grid">
           <article v-for="member in team.members" :key="member.name" class="team-card">
+            <a href="https://www.linkedin.com/company/isomero-bi-technologies/about/?viewAsMember=truegr">
             <img :src="member.image" :alt="member.name" loading="lazy" />
             <h3>{{ member.name }}</h3>
             <span class="team-card__role">{{ member.role }}</span>
             <p>{{ member.bio }}</p>
+          </a>
           </article>
         </div>
       </div>
@@ -50,10 +52,10 @@ const { team } = siteData
 }
 
 .team-card img {
-  width: 100%;
+  width: full;
   aspect-ratio: 1;
-  object-fit: cover;
-  margin-bottom: 1.25rem;
+  object-fit: contain;
+  margin-bottom: 2rem;
 }
 
 .team-card h3 {

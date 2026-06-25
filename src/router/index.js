@@ -9,10 +9,10 @@ const routes = [
     meta: { title: siteData.site.name },
   },
   {
-    path: '/projects',
-    name: 'projects',
-    component: () => import('@/views/ProjectsView.vue'),
-    meta: { title: 'Projects' },
+    path: '/programs',
+    name: 'programs',
+    component: () => import('@/views/ProgramsOverviewView.vue'),
+    meta: { title: 'Programs' },
   },
   {
     path: '/materials-for-learning',

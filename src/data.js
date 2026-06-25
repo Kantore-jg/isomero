@@ -7,10 +7,10 @@ export const siteData = {
 
   navigation: [
     {
-      label: 'Projects',
+      label: 'Programs',
       type: 'dropdown',
-      to: '/projects',
-      overviewLabel: 'All Projects',
+      to: '/programs',
+      overviewLabel: 'All Programs',
       children: [
         { label: 'Materials for Learning', to: '/materials-for-learning' },
         { label: 'Education for Teachers', to: '/education-for-teachers' },
@@ -47,7 +47,7 @@ export const siteData = {
       items: [
         {
           slug: 'materials-for-learning',
-          title: 'Materials for Learning',
+          title: 'we lead people to learn so many things in IT and Software development',
           description:
             'Many educational materials in local languages are often out of date. We work with school leaders and teachers to create new materials in local languages.',
           image:
@@ -118,6 +118,10 @@ export const siteData = {
           title: 'Open Resources',
           text: 'All materials we create are shared openly so schools everywhere can adapt and use them freely.',
         },
+        {
+          title: 'youtube video',
+          videoURL: 'https://youtu.be/nJsaxe18D9I?si=N9fnu_AI4IzD25At',
+        }
       ],
     },
     'education-for-teachers': {
@@ -156,8 +160,8 @@ export const siteData = {
     },
   },
 
-  projects: {
-    title: 'Materials for Learning',
+  programsOverview: {
+    title: 'Our Programs',
     heroImage:
       'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1600&q=80',
     description:
@@ -168,6 +172,7 @@ export const siteData = {
         to: '/materials-for-learning',
         image:
           'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80',
+        video:'https://youtu.be/nJsaxe18D9I?si=N9fnu_AI4IzD25At',
       },
       {
         title: 'Education for Teachers',
@@ -216,26 +221,26 @@ export const siteData = {
     intro: 'Meet the people behind our mission to transform education.',
     members: [
       {
-        name: 'First Name Last Name',
+        name: 'IRUMVA Brice Berry,NININAHAZWE Jean Lionel,Kantore Jean Gildas',
         role: 'Executive Director',
         bio: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
         image:
-          'https://avatars.githubusercontent.com/u/189913060?v=4&size=64',
+          'https://ik.imagekit.io/cy3dy3vcm/Isomero/team/team.png',
       },
-      {
-        name: 'First Name Last Name',
-        role: 'Program Director',
-        bio: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
-        image:
-          'https://media.licdn.com/dms/image/v2/D5603AQGeVXGeEAcxYw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1726721792103?e=1784160000&v=beta&t=bcYGN_OaSdGdUaSuzyMCnLGFA9ZOoVhY7U46ikKQ7iQ',
-      },
-      {
-        name: 'First Name Last Name',
-        role: 'Community Lead',
-        bio: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
-        image:
-          'https://media.licdn.com/dms/image/v2/D5603AQGY7wqzMZFulg/profile-displayphoto-shrink_800_800/B56ZSSs8hLHwAg-/0/1737628044457?e=1784160000&v=beta&t=mw8CDyxIbFpG2nwCOzPpvlnGXvFM3bAJo3JXVbmjyGs',
-      },
+      // {
+      //   name: 'First Name Last Name',
+      //   role: 'Program Director',
+      //   bio: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
+      //   image:
+      //     'https://media.licdn.com/dms/image/v2/D5603AQGeVXGeEAcxYw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1726721792103?e=1784160000&v=beta&t=bcYGN_OaSdGdUaSuzyMCnLGFA9ZOoVhY7U46ikKQ7iQ',
+      // },
+      // {
+      //   name: 'First Name Last Name',
+      //   role: 'Community Lead',
+      //   bio: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
+      //   image:
+      //     'https://media.licdn.com/dms/image/v2/D5603AQGY7wqzMZFulg/profile-displayphoto-shrink_800_800/B56ZSSs8hLHwAg-/0/1737628044457?e=1784160000&v=beta&t=mw8CDyxIbFpG2nwCOzPpvlnGXvFM3bAJo3JXVbmjyGs',
+      // },
       // {
       //   name: 'First Name Last Name',
       //   role: 'Operations Manager',
