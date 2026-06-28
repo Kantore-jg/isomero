@@ -15,11 +15,11 @@ const routes = [
     meta: { title: 'Programs' },
   },
   {
-    path: '/materials-for-learning',
-    name: 'materials-for-learning',
+    path: '/Leaders-build-with-ai',
+    name: 'Leaders-build-with-ai',
     component: () => import('@/views/ProgramView.vue'),
-    props: { slug: 'materials-for-learning' },
-    meta: { title: 'Materials for Learning' },
+    props: { slug: 'Leaders-build-with-ai' },
+    meta: { title: 'Build with AI 2026' },
   },
   {
     path: '/education-for-teachers',
@@ -66,6 +66,14 @@ const routes = [
     component: () => import('@/views/DonateView.vue'),
     meta: { title: 'Donate' },
   },
+  {
+    path: '/formation-excel',
+    name: 'formation-excel',
+    component: () => import('@/views/ProgramView.vue'),
+    props: { slug: 'excel-formation' },
+    meta: { title: 'support communitie excel formation' },
+  },
+
 ]
 
 const router = createRouter({

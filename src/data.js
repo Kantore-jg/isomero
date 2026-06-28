@@ -1,7 +1,7 @@
 export const siteData = {
   site: {
     name: 'Isomero',
-    tagline: 'Empowering teachers and students for a brighter future.',
+    tagline: "L'innovation et l'excellence en digitalisation numerique.",
     description: 'Supporting education and innovation.',
   },
 
@@ -12,7 +12,7 @@ export const siteData = {
       to: '/programs',
       overviewLabel: 'All Programs',
       children: [
-        { label: 'Materials for Learning', to: '/materials-for-learning' },
+        { label: 'Build with AI 2026', to: '/Leaders-build-with-ai' },
         { label: 'Education for Teachers', to: '/education-for-teachers' },
         { label: 'Support for Communities', to: '/support-for-communities' },
       ],
@@ -25,7 +25,7 @@ export const siteData = {
 
   home: {
     hero: {
-      title: 'Empowering teachers and students for a brighter future.',
+      title: "L'innovation et l'excellence en digitalisation numerique.",
       subtitle: '',
       cta: { label: 'Our Vision', to: '/our-vision' },
       image:
@@ -46,7 +46,7 @@ export const siteData = {
       title: 'Our Programs',
       items: [
         {
-          slug: 'materials-for-learning',
+          slug: 'Leaders-build-with-ai',
           title: 'we lead people to learn so many things in IT and Software development',
           description:
             'Many educational materials in local languages are often out of date. We work with school leaders and teachers to create new materials in local languages.',
@@ -72,6 +72,15 @@ export const siteData = {
             'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80',
           cta: { label: 'Learn More', to: '/support-for-communities' },
         },
+        // {
+        //   slug: 'formation-excel',
+        //   title: 'Excel Formation',
+        //   description:
+        //     "we're used to help people,communities or online for excel formation ",
+        //   image:
+        //     'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80',
+        //   cta: { label: 'Learn More', to: '/formation-excel' },
+        // },
       ],
     },
 
@@ -103,8 +112,8 @@ export const siteData = {
   },
 
   programs: {
-    'materials-for-learning': {
-      title: 'Materials for Learning',
+    'Leaders-build-with-ai': {
+      title: 'Build with AI 2026',
       heroImage:
         'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1600&q=80',
       intro:
@@ -163,6 +172,27 @@ export const siteData = {
         },
       ],
     },
+    'formation-excel': {
+      title: 'Excel Formation',
+      heroImage:
+        'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600&q=80',
+      intro:
+        "We're used to help communities for excel formation and other courses of microsoft.",
+      sections: [
+        {
+          title: 'Brarudi',
+          text: 'Workshops and mentorship programs designed to help teachers grow their skills and confidence in the classroom.',
+        },
+        {
+          title: 'Personnal',
+          text: 'Teachers learn best from each other. We facilitate communities of practice across schools and regions.',
+        },
+        {
+          title: 'Using video on Youtube',
+          text: 'Teachers learn best from each other. We facilitate communities of practice across schools and regions.',
+        },
+      ],
+    }
   },
 
   programsOverview: {
@@ -173,8 +203,8 @@ export const siteData = {
       'Explore our initiatives designed to empower educators and students around the world.',
     items: [
       {
-        title: 'Materials for Learning',
-        to: '/materials-for-learning',
+        title: 'Build with AI',
+        to: '/Leaders-build-with-ai',
         image:
           'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80',
         video:'https://youtu.be/nJsaxe18D9I?si=N9fnu_AI4IzD25At',
@@ -191,13 +221,19 @@ export const siteData = {
         image:
           'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80',
       },
+      {
+        title: 'formation excel',
+        to: '/formation-excel',
+        image:
+          'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80',
+      },
     ],
   },
 
   vision: {
     title: 'Our Vision',
     hero: {
-      title: 'Educators are innovators.',
+      title: 'we have information and formation on internet, let make formation as our choice',
       image:
         'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80',
     },
@@ -326,7 +362,7 @@ export const siteData = {
     organization: 'The Isomero Foundation',
     location: 'Rohero, No 13',
     links: [
-      { label: 'Materials for Learning', to: '/materials-for-learning' },
+      { label: 'Build with AI 2026', to: '/Leaders-build-with-ai' },
       { label: 'Education for Teachers', to: '/education-for-teachers' },
       { label: 'Support for Communities', to: '/support-for-communities' },
     ],
