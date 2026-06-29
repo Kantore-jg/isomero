@@ -6,10 +6,13 @@ const { team } = siteData
 
 <template>
   <div>
-    <section class="section section--black team-hero">
+    <section
+      class="page-hero"
+      :style="{ backgroundImage: `url(${team.heroImage})` }"
+    >
       <div class="container">
         <h1>{{ team.title }}</h1>
-        <p>{{ team.intro }}</p>
+        <p class="team-hero__intro">{{ team.intro }}</p>
       </div>
     </section>
 
@@ -31,18 +34,11 @@ const { team } = siteData
 </template>
 
 <style scoped>
-.team-hero {
-  padding-top: calc(var(--header-height) + 64px);
-}
-
-.team-hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  margin-bottom: 1rem;
-}
-
-.team-hero p {
-  color: rgba(255, 255, 255, 0.7);
+.team-hero__intro {
+  color: rgba(255, 255, 255, 0.85);
   max-width: 500px;
+  margin-top: 1rem;
+  font-size: 1.125rem;
 }
 
 .team__grid {

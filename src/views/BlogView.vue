@@ -6,7 +6,10 @@ const { blog } = siteData
 
 <template>
   <div>
-    <section class="section section--black blog-hero">
+    <section
+      class="page-hero"
+      :style="{ backgroundImage: `url(${blog.heroImage})` }"
+    >
       <div class="container">
         <h1>{{ blog.title }}</h1>
       </div>
@@ -33,14 +36,6 @@ const { blog } = siteData
 </template>
 
 <style scoped>
-.blog-hero {
-  padding-top: calc(var(--header-height) + 64px);
-}
-
-.blog-hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-}
-
 .blog__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

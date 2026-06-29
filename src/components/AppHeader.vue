@@ -14,6 +14,8 @@ const heroImage = computed(() => {
   if (name === 'home') return siteData.home.hero.image
   if (name === 'programs') return siteData.programsOverview.heroImage
   if (name === 'our-vision') return siteData.vision.hero.image
+  if (name === 'our-team') return siteData.team.heroImage
+  if (name === 'blog') return siteData.blog.heroImage
   if (name === 'blog-post') {
     return siteData.blog.posts.find((p) => p.slug === params.slug)?.image ?? null
   }

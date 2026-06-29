@@ -259,6 +259,8 @@ export const siteData = {
 
   team: {
     title: 'Our Team',
+    heroImage:
+      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80',
     intro: 'Meet the people behind our mission to transform education.',
     members: [
       {
@@ -294,6 +296,8 @@ export const siteData = {
 
   blog: {
     title: 'Blog',
+    heroImage:
+      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80',
     posts: [
       {
         slug: 'blog-post-four',
@@ -303,7 +307,7 @@ export const siteData = {
         excerpt:
           'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
         image:
-          'https://images.unsplash.com/photo-1434030216441-b6bbad806804?w=800&q=80',
+          'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80',
         content:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
       },
@@ -315,7 +319,7 @@ export const siteData = {
         excerpt:
           'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
         image:
-          'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80',
+          'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80',
         content:
           'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
       },
@@ -327,7 +331,7 @@ export const siteData = {
         excerpt:
           'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
         image:
-          'https://images.unsplash.com/photo-1497633762263-8f9fb803b40a?w=800&q=80',
+          'https://images.unsplash.com/photo-1497633762263-8f9fb803b40a?w=600&q=80',
         content:
           'Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
       },
