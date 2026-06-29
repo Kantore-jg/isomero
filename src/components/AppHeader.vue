@@ -1,9 +1,37 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { useRoute } from 'vue-router'
 import { siteData } from '@/data.js'
 
+const route = useRoute()
 const menuOpen = ref(false)
 const openDropdown = ref(null)
+const scrolled = ref(false)
+
+const heroImage = computed(() => {
+  const { name, params } = route
+
+  if (name === 'home') return siteData.home.hero.image
+  if (name === 'programs') return siteData.programsOverview.heroImage
+  if (name === 'our-vision') return siteData.vision.hero.image
+  if (name === 'blog-post') {
+    return siteData.blog.posts.find((p) => p.slug === params.slug)?.image ?? null
+  }
+  if (name in siteData.programs) {
+    return siteData.programs[name].heroImage
+  }
+  return null
+})
+
+const isHeroPage = computed(() => Boolean(heroImage.value))
+const isTransparent = computed(() => isHeroPage.value && !scrolled.value && !menuOpen.value)
+
+function onScroll() {
+  scrolled.value = window.scrollY > 50
+}
+
+onMounted(() => window.addEventListener('scroll', onScroll, { passive: true }))
+onUnmounted(() => window.removeEventListener('scroll', onScroll))
 
 function toggleDropdown(label) {
   openDropdown.value = openDropdown.value === label ? null : label
@@ -21,7 +49,13 @@ function closeMenu() {
 </script>
 
 <template>
-  <header class="header" :class="{ 'header--open': menuOpen }">
+  <header
+    class="header"
+    :class="{
+      'header--open': menuOpen,
+      'header--transparent': isTransparent,
+    }"
+  >
     <div class="header__inner container">
       <RouterLink to="/" class="header__logo" @click="closeMenu">
         {{ siteData.site.name }}
@@ -100,8 +134,13 @@ function closeMenu() {
   right: 0;
   z-index: 100;
   height: var(--header-height);
-  background: brown;
+  background: var(--color-black);
   color: var(--color-white);
+  transition: background var(--transition);
+}
+
+.header--transparent {
+  background: transparent;
 }
 
 .header__inner {
