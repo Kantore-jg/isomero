@@ -70,7 +70,7 @@ const routes = [
     path: '/formation-excel',
     name: 'formation-excel',
     component: () => import('@/views/ProgramView.vue'),
-    props: { slug: 'excel-formation' },
+    props: { slug: 'formation-excel' },
     meta: { title: 'support communitie excel formation' },
   },
 

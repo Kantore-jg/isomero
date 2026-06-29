@@ -100,7 +100,7 @@ function closeMenu() {
   right: 0;
   z-index: 100;
   height: var(--header-height);
-  background: var(--color-black);
+  background: brown;
   color: var(--color-white);
 }
 
