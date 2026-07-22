@@ -12,8 +12,12 @@ const { hero, editorial, programs, testimonial, contact } = siteData.home
 <template>
   <div>
     <HeroSection
+      :eyebrow="hero.eyebrow"
       :title="hero.title"
-      :cta="hero.cta"
+      :subtitle="hero.subtitle"
+      :primary-cta="hero.primaryCta"
+      :secondary-cta="hero.secondaryCta"
+      :badges="hero.badges"
       :image="hero.image"
     />
     <EditorialSection

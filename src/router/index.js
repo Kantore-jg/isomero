@@ -62,9 +62,7 @@ const routes = [
   },
   {
     path: '/donate',
-    name: 'donate',
-    component: () => import('@/views/DonateView.vue'),
-    meta: { title: 'Donate' },
+    redirect: '/',
   },
   {
     path: '/formation-excel',

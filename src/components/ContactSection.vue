@@ -24,7 +24,7 @@ function handleSubmit() {
 </script>
 
 <template>
-  <section class="section" :class="`section--${theme}`">
+  <section id="contact" class="section contact-section" :class="`section--${theme}`">
     <div class="container contact">
       <div class="contact__info">
         <h2 class="section-title">{{ title }}</h2>
@@ -73,6 +73,10 @@ function handleSubmit() {
 </template>
 
 <style scoped>
+.contact-section {
+  scroll-margin-top: calc(var(--header-height) + 24px);
+}
+
 .contact {
   display: grid;
   grid-template-columns: 1fr 1fr;

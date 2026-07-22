@@ -20,16 +20,27 @@ export const siteData = {
     { label: 'Our Vision', to: '/our-vision' },
     { label: 'Our Team', to: '/our-team' },
     { label: 'Blog', to: '/blog' },
-    { label: 'Donate', to: '/donate', highlight: true },
+    { label: 'Contact Us', to: '/#contact', highlight: true },
   ],
 
   home: {
     hero: {
-      title: "L'innovation et l'excellence en digitalisation numerique.",
-      subtitle: '',
-      cta: { label: 'Our Vision', to: '/our-vision' },
+      eyebrow: 'Isomero Bi Technologies',
+      title: 'Streamline education and digital services with tailored software solutions',
+      subtitle:
+        'Empowering Burundian schools, teams, and communities with practical, efficient, and future-ready digital tools.',
+      primaryCta: { label: 'Explore Our Programs', to: '/programs' },
+      secondaryCta: { label: 'Contact Us', to: '/#contact' },
+      badges: [
+        { label: 'Web Apps', style: 'left: 2%; bottom: 14%;' },
+        { label: 'Mobile', style: 'left: 10%; bottom: 28%;' },
+        { label: 'Training', style: 'left: 18%; bottom: 8%;' },
+        { label: 'Cloud', style: 'right: 23%; bottom: 28%;' },
+        { label: 'Data', style: 'right: 16%; bottom: 12%;' },
+        { label: 'Automation', style: 'right: 5%; bottom: 18%;' },
+      ],
       image:
-        'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=80',
+        'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&q=80',
     },
 
     editorial: {
@@ -52,7 +63,7 @@ export const siteData = {
             'Many educational materials in local languages are often out of date. We work with school leaders and teachers to create new materials in local languages.',
           image:
             'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80',
-          cta: { label: 'Learn More', to: '/materials-for-learning' },
+          cta: { label: 'Learn More', to: '/Leaders-build-with-ai' },
         },
         {
           slug: 'education-for-teachers',
@@ -87,7 +98,7 @@ export const siteData = {
     testimonial: {
       theme: 'black',
       quote:
-        "With the support of Y'all, Isomero we're able to serve and to give the world our knowledge",
+        "With the support of Y'all, Isomero we're able to serve and give the world our knowledge",
       author: 'Isomero Team',
       role: 'Principal Rule',
     },
@@ -230,10 +241,10 @@ export const siteData = {
     ],
   },
 
-  vision: {
-    title: 'Our Vision',
-    hero: {
-      title: 'we have information and formation on internet, let make formation as our choice',
+    vision: {
+      title: 'Our Vision',
+      hero: {
+      title: 'We believe digital learning and technical training should be accessible to everyone',
       image:
         'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80',
     },
@@ -248,13 +259,13 @@ export const siteData = {
     "Conception, maintenance et administration des systèmes et réseaux informatiques ; "+
     "Vente et fourniture d’équipements technologiques et de laboratoires ; "+
     "Enseignement, formation et accompagnement en transformation digitale."
-],
+    ],
     quote: {
       text: 'Education is the most powerful weapon which you can use to change the world.',
       author: 'Master of Scientist',
       role: ' Mentor',
     },
-    cta: { label: 'Donate', to: '/donate' },
+    cta: { label: 'Contact Us', to: '/#contact' },
   },
 
   team: {
@@ -348,18 +359,6 @@ export const siteData = {
           'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.',
       },
     ],
-  },
-
-  donate: {
-    title: 'Donate',
-    headline: 'Make a Difference',
-    description:
-      'Your contribution helps us empower teachers and students around the world. Every gift makes an impact.',
-    amounts: [25, 50, 100, 250],
-    customAmountLabel: 'Custom Amount',
-    customAmountPlaceholder: 'Please enter an amount',
-    submitLabel: 'Donate Now',
-    successMessage: 'Thank you for your generous donation!',
   },
 
   footer: {
