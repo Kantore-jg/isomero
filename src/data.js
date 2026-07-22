@@ -3,9 +3,14 @@ export const siteData = {
     name: 'Isomero',
     tagline: "L'innovation et l'excellence en digitalisation numerique.",
     description: 'Supporting education and innovation.',
+    logo: 'isomero',
+    favicon: '/favicon.svg',
+    linkedin: 'https://www.linkedin.com/company/135074078/',
+    whatsapp: 'https://wa.me/25767908378',
   },
 
   navigation: [
+    { label: 'Home', to: '/' },
     {
       label: 'Programs',
       type: 'dropdown',
@@ -17,28 +22,23 @@ export const siteData = {
         { label: 'Support for Communities', to: '/support-for-communities' },
       ],
     },
+    { label: 'Learn', to: '/learn' },
+    { label: 'Portfolio', to: '/portfolio' },
     { label: 'Our Vision', to: '/our-vision' },
     { label: 'Our Team', to: '/our-team' },
     { label: 'Blog', to: '/blog' },
-    { label: 'Contact Us', to: '/#contact', highlight: true },
+    { label: 'Contact Us', to: '/contact', highlight: true },
   ],
 
   home: {
     hero: {
       eyebrow: 'Isomero Bi Technologies',
-      title: 'Streamline education and digital services with tailored software solutions',
+      title: "you are in the right place",
       subtitle:
-        'Empowering Burundian schools, teams, and communities with practical, efficient, and future-ready digital tools.',
+        "offrant des services informatiques, des solutions"+
+"numériques, ainsi que des activités d’enseignement et de formation professionnelle.",
       primaryCta: { label: 'Explore Our Programs', to: '/programs' },
-      secondaryCta: { label: 'Contact Us', to: '/#contact' },
-      badges: [
-        { label: 'Web Apps', style: 'left: 2%; bottom: 14%;' },
-        { label: 'Mobile', style: 'left: 10%; bottom: 28%;' },
-        { label: 'Training', style: 'left: 18%; bottom: 8%;' },
-        { label: 'Cloud', style: 'right: 23%; bottom: 28%;' },
-        { label: 'Data', style: 'right: 16%; bottom: 12%;' },
-        { label: 'Automation', style: 'right: 5%; bottom: 18%;' },
-      ],
+      secondaryCta: { label: 'Contact Us', to: '/contact' },
       image:
         'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&q=80',
     },
@@ -95,31 +95,9 @@ export const siteData = {
       ],
     },
 
-    testimonial: {
-      theme: 'black',
-      quote:
-        "With the support of Y'all, Isomero we're able to serve and give the world our knowledge",
-      author: 'Isomero Team',
-      role: 'Principal Rule',
-    },
 
-    contact: {
-      theme: 'light',
-      title: 'Contact',
-      subtitle: 'Feel free to contact us with any questions.',
-      email: 'isomerobi@gmail.com',
-      phone: '67908378',
-      address: 'Rohero, No 12345',
-      form: {
-        fields: [
-          { name: 'name', label: 'Name', type: 'text', required: true },
-          { name: 'email', label: 'Email', type: 'email', required: true },
-          { name: 'message', label: 'Message', type: 'textarea', required: true },
-        ],
-        submitLabel: 'Send',
-        successMessage: 'Thank you! Your message has been sent.',
-      },
-    },
+
+   
   },
 
   programs: {
@@ -265,7 +243,109 @@ export const siteData = {
       author: 'Master of Scientist',
       role: ' Mentor',
     },
-    cta: { label: 'Contact Us', to: '/#contact' },
+    cta: { label: 'Contact Us', to: '/contact' },
+  },
+
+  learn: {
+    title: 'Learn',
+    heroImage:
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600&q=80',
+    heroTitle: 'Advanced Academy',
+    heroSubtitle:
+      'Welcome to our learning hub, where we share insights, articles, and courses to help you stay ahead in the tech world.',
+    items: [
+      {
+        slug: 'learn-post-one',
+        title: 'The 5 Most Used Programming Languages in 2025',
+        date: 'August 6, 2025',
+        excerpt:
+          'Why they matter, when to choose them, and what they can do for your next project.',
+        image:
+          'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=900&q=80',
+        cta: { label: 'Read More', to: '/blog' },
+      },
+      {
+        slug: 'learn-post-two',
+        title: 'Growing Together Through Team Coding',
+        date: 'July 28, 2025',
+        excerpt:
+          'How collaboration helps teams ship better products and learn faster in the process.',
+        image:
+          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80',
+        cta: { label: 'Read More', to: '/blog' },
+      },
+      {
+        slug: 'learn-post-three',
+        title: 'Why ERP Matters for Modern Businesses',
+        date: 'July 11, 2025',
+        excerpt:
+          'A simple breakdown of how centralized tools improve coordination, reporting, and growth.',
+        image:
+          'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=900&q=80',
+        cta: { label: 'Read More', to: '/blog' },
+      },
+    ],
+  },
+
+  portfolio: {
+    title: 'Portfolio',
+    heroImage:
+      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&q=80',
+    heroTitle: 'Selected Work',
+    heroSubtitle:
+      'A snapshot of projects, training initiatives, and digital products we have delivered for clients and communities.',
+    items: [
+      {
+        title: 'Digital School Portal',
+        category: 'Web Application',
+        description: 'A lightweight school portal for communication, content, and admin workflows.',
+        image:
+          'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&q=80',
+      },
+      {
+        title: 'Teacher Training Platform',
+        category: 'Learning Platform',
+        description: 'A training experience designed to support teachers with practical digital skills.',
+        image:
+          'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=900&q=80',
+      },
+      {
+        title: 'Community Support Toolkit',
+        category: 'Community Program',
+        description: 'Digital tools and shared resources built for local coordination and outreach.',
+        image:
+          'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900&q=80',
+      },
+      {
+        title: 'Automation Dashboard',
+        category: 'Business System',
+        description: 'A simple dashboard concept for tracking operations and reporting progress.',
+        image:
+          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80',
+      },
+    ],
+  },
+
+  contactPage: {
+    title: 'Contact',
+    heroImage:
+      'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&q=80',
+    heroTitle: 'Let’s build something useful together',
+    heroSubtitle:
+      'Send us a message',
+    email: 'isomerobi@gmail.com',
+    phone: '67908378',
+    address: 'Rohero, No 13',
+    form: {
+      fields: [
+        { name: 'name', label: 'Full Name', type: 'text', required: true },
+        { name: 'email', label: 'Email Address', type: 'email', required: true },
+        { name: 'subject', label: 'Subject', type: 'text', required: true },
+        { name: 'message', label: 'Message', type: 'textarea', required: true },
+      ],
+      submitLabel: 'Send Message',
+      successMessage: 'Your email draft has been prepared.',
+    },
   },
 
   team: {
@@ -365,6 +445,10 @@ export const siteData = {
     organization: 'The Isomero Foundation',
     location: 'Rohero, No 13',
     links: [
+      { label: 'Home', to: '/' },
+      { label: 'Learn', to: '/learn' },
+      { label: 'Portfolio', to: '/portfolio' },
+      { label: 'Contact Us', to: '/contact' },
       { label: 'Build with AI 2026', to: '/Leaders-build-with-ai' },
       { label: 'Education for Teachers', to: '/education-for-teachers' },
       { label: 'Support for Communities', to: '/support-for-communities' },

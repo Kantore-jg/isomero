@@ -15,6 +15,24 @@ const routes = [
     meta: { title: 'Programs' },
   },
   {
+    path: '/learn',
+    name: 'learn',
+    component: () => import('@/views/LearnView.vue'),
+    meta: { title: 'Learn' },
+  },
+  {
+    path: '/portfolio',
+    name: 'portfolio',
+    component: () => import('@/views/PortfolioView.vue'),
+    meta: { title: 'Portfolio' },
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('@/views/ContactView.vue'),
+    meta: { title: 'Contact' },
+  },
+  {
     path: '/Leaders-build-with-ai',
     name: 'Leaders-build-with-ai',
     component: () => import('@/views/ProgramView.vue'),
@@ -62,7 +80,7 @@ const routes = [
   },
   {
     path: '/donate',
-    redirect: '/',
+    redirect: '/contact',
   },
   {
     path: '/formation-excel',

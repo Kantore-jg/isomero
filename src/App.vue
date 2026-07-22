@@ -1,6 +1,7 @@
 <script setup>
 import AppHeader from '@/components/AppHeader.vue'
 import AppFooter from '@/components/AppFooter.vue'
+import WhatsAppButton from '@/components/WhatsAppButton.vue'
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import AppFooter from '@/components/AppFooter.vue'
       <RouterView />
     </main>
     <AppFooter />
+    <WhatsAppButton />
   </div>
 </template>
 

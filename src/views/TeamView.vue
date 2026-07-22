@@ -20,7 +20,7 @@ const { team } = siteData
       <div class="container">
         <div class="team__grid">
           <article v-for="member in team.members" :key="member.name" class="team-card">
-            <a href="https://www.linkedin.com/company/isomero-bi-technologies/about/?viewAsMember=truegr">
+            <a :href="siteData.site.linkedin" target="_blank" rel="noreferrer">
             <img :src="member.image" :alt="member.name" loading="lazy" />
             <h3>{{ member.name }}</h3>
             <span class="team-card__role">{{ member.role }}</span>
@@ -48,7 +48,7 @@ const { team } = siteData
 }
 
 .team-card img {
-  width: full;
+  width: 100%;
   aspect-ratio: 1;
   object-fit: contain;
   margin-bottom: 2rem;

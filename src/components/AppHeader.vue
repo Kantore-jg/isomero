@@ -13,6 +13,9 @@ const heroImage = computed(() => {
 
   if (name === 'home') return siteData.home.hero.image
   if (name === 'programs') return siteData.programsOverview.heroImage
+  if (name === 'learn') return siteData.learn.heroImage
+  if (name === 'portfolio') return siteData.portfolio.heroImage
+  if (name === 'contact') return siteData.contactPage.heroImage
   if (name === 'our-vision') return siteData.vision.hero.image
   if (name === 'our-team') return siteData.team.heroImage
   if (name === 'blog') return siteData.blog.heroImage
@@ -60,7 +63,11 @@ function closeMenu() {
   >
     <div class="header__inner container">
       <RouterLink to="/" class="header__logo" @click="closeMenu">
-        {{ siteData.site.name }}
+        <img
+          class="header__logo-image"
+          :src="siteData.site.logo"
+          :alt="siteData.site.name"
+        />
       </RouterLink>
 
       <button
@@ -153,14 +160,18 @@ function closeMenu() {
 }
 
 .header__logo {
-  font-size: 1.25rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
   transition: opacity var(--transition);
 }
 
 .header__logo:hover {
   opacity: 0.8;
+}
+
+.header__logo-image {
+  display: block;
+  width: 112px;
+  height: auto;
+  object-fit: contain;
 }
 
 .header__toggle {
@@ -310,6 +321,10 @@ button.header__link {
     display: block;
     width: 100%;
     padding: 1rem 0;
+  }
+
+  .header__logo-image {
+    width: 92px;
   }
 
   .header__dropdown {

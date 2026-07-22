@@ -8,6 +8,10 @@ import { siteData } from '@/data.js'
       <div class="footer__brand">
         <h4>{{ siteData.footer.organization }}</h4>
         <p>{{ siteData.footer.location }}</p>
+        <div class="footer__socials">
+          <a :href="siteData.site.linkedin" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a :href="siteData.site.whatsapp" target="_blank" rel="noreferrer">WhatsApp</a>
+        </div>
       </div>
 
       <nav class="footer__nav">
@@ -47,6 +51,25 @@ import { siteData } from '@/data.js'
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.6);
   white-space: pre-line;
+}
+
+.footer__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.footer__socials a {
+  font-size: 0.8125rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  transition: color var(--transition);
+}
+
+.footer__socials a:hover {
+  color: var(--color-accent);
 }
 
 .footer__nav {
