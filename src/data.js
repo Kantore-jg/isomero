@@ -3,7 +3,7 @@ export const siteData = {
     name: 'Isomero',
     tagline: "L'innovation et l'excellence en digitalisation numerique.",
     description: 'Supporting education and innovation.',
-    logo: 'isomero',
+    logo: '/ISOMERO_logo.svg',
     favicon: '/favicon.svg',
     linkedin: 'https://www.linkedin.com/company/135074078/',
     whatsapp: 'https://wa.me/25767908378',
@@ -40,7 +40,7 @@ export const siteData = {
       primaryCta: { label: 'Explore Our Programs', to: '/programs' },
       secondaryCta: { label: 'Contact Us', to: '/contact' },
       image:
-        'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&q=80',
+        'https://ik.imagekit.io/cy3dy3vcm/Isomero/home%20background/IMG_20260527_141150_HDR.jpg?updatedAt=1787141856144',
     },
 
     editorial: {
@@ -83,15 +83,7 @@ export const siteData = {
             'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80',
           cta: { label: 'Learn More', to: '/support-for-communities' },
         },
-        // {
-        //   slug: 'formation-excel',
-        //   title: 'Excel Formation',
-        //   description:
-        //     "we're used to help people,communities or online for excel formation ",
-        //   image:
-        //     'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80',
-        //   cta: { label: 'Learn More', to: '/formation-excel' },
-        // },
+
       ],
     },
 

@@ -170,6 +170,7 @@ function closeMenu() {
 .header__logo-image {
   display: block;
   width: 112px;
+  max-height: 54px;
   height: auto;
   object-fit: contain;
 }
