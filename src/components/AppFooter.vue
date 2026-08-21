@@ -14,7 +14,7 @@ import { siteData } from '@/data.js'
         </div>
       </div>
 
-      <nav class="footer__nav">
+      <!-- <nav class="footer__nav">
         <RouterLink
           v-for="link in siteData.footer.links"
           :key="link.to"
@@ -23,7 +23,7 @@ import { siteData } from '@/data.js'
         >
           {{ link.label }}
         </RouterLink>
-      </nav>
+      </nav> -->
     </div>
   </footer>
 </template>

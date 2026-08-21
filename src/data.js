@@ -25,7 +25,7 @@ export const siteData = {
     { label: 'Learn', to: '/learn' },
     { label: 'Portfolio', to: '/portfolio' },
     { label: 'Our Vision', to: '/our-vision' },
-    { label: 'Our Team', to: '/our-team' },
+    // { label: 'Our Team', to: '/our-team' },
     { label: 'Blog', to: '/blog' },
     { label: 'Contact Us', to: '/contact', highlight: true },
   ],
@@ -35,8 +35,7 @@ export const siteData = {
       eyebrow: 'Isomero Bi Technologies',
       title: "you are in the right place",
       subtitle:
-        "offrant des services informatiques, des solutions"+
-"numériques, ainsi que des activités d’enseignement et de formation professionnelle.",
+        "IT services, digital solutions, as well as teaching and vocational training activities.",
       primaryCta: { label: 'Explore Our Programs', to: '/programs' },
       secondaryCta: { label: 'Contact Us', to: '/contact' },
       image:
@@ -62,7 +61,7 @@ export const siteData = {
           description:
             'Many educational materials in local languages are often out of date. We work with school leaders and teachers to create new materials in local languages.',
           image:
-            'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80',
+            'https://ik.imagekit.io/cy3dy3vcm/Isomero/home%20background/IMG_20260404_155207_HDR.jpg?updatedAt=1787141855700',
           cta: { label: 'Learn More', to: '/Leaders-build-with-ai' },
         },
         {
@@ -80,7 +79,7 @@ export const siteData = {
           description:
             'Education happens within the context of a larger community. Our approach extends beyond the school to include families and local leaders.',
           image:
-            'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80',
+            'https://ik.imagekit.io/cy3dy3vcm/Isomero/Community%20/community.png',
           cta: { label: 'Learn More', to: '/support-for-communities' },
         },
 
@@ -131,7 +130,7 @@ export const siteData = {
           text: 'Workshops and mentorship programs designed to help teachers grow their skills and confidence in the classroom.',
         },
         {
-          title: 'Peer Learning',
+          title: 'Learning',
           text: 'Teachers learn best from each other. We facilitate communities of practice across schools and regions.',
         },
       ],
