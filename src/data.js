@@ -20,6 +20,7 @@ export const siteData = {
         { label: 'Build with AI 2026', to: '/Leaders-build-with-ai' },
         { label: 'Education for Teachers', to: '/education-for-teachers' },
         { label: 'Support for Communities', to: '/support-for-communities' },
+        { label: 'Videos', to: '/videos' },
       ],
     },
     { label: 'Learn', to: '/learn' },
@@ -160,7 +161,7 @@ export const siteData = {
         "We're used to help communities for excel formation and other courses of microsoft.",
       sections: [
         {
-          title: 'Brarudi',
+          title: 'organisation',
           text: 'Workshops and mentorship programs designed to help teachers grow their skills and confidence in the classroom.',
         },
         {
@@ -172,7 +173,27 @@ export const siteData = {
           text: 'Teachers learn best from each other. We facilitate communities of practice across schools and regions.',
         },
       ],
-    }
+    },
+    'videos': {
+      title: 'Videos realized by Isomero',
+      intro: 'programme de OAA international 30th Editions',
+      heroImage:
+        'https://ik.imagekit.io/cy3dy3vcm/Isomero/videos/Pasted%20image%20(11).png',
+        sections: [
+          {
+            title: 'Professional Development',
+            text: 'directoring AI to realize the project',
+          },
+          {
+            title: 'skills and knowledge',
+            text: 'using tools for voice over and or dependencies to make a complete video',
+          },
+          {
+            title: 'video realization',
+            videoURL: 'https://drive.google.com/file/d/1OvkVQaRU_SfwfRJwYaUviqv8llMs_wOa/view',
+          }
+        ],
+    },
   },
 
   programsOverview: {
@@ -206,6 +227,12 @@ export const siteData = {
         to: '/formation-excel',
         image:
           'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80',
+      },
+      {
+        title: 'Videos',
+        to: '/videos',
+        image:
+          'https://ik.imagekit.io/cy3dy3vcm/Isomero/videos/Pasted%20image%20(18).png',
       },
     ],
   },

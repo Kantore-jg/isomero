@@ -2,11 +2,14 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { siteData } from '@/data.js'
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import { useLocale } from '@/composables/useLocale.js'
 
 const route = useRoute()
 const menuOpen = ref(false)
 const openDropdown = ref(null)
 const scrolled = ref(false)
+const { t } = useLocale()
 
 const heroImage = computed(() => {
   const { name, params } = route
@@ -30,6 +33,28 @@ const heroImage = computed(() => {
 
 const isHeroPage = computed(() => Boolean(heroImage.value))
 const isTransparent = computed(() => isHeroPage.value && !scrolled.value && !menuOpen.value)
+
+const navigation = computed(() => [
+  { id: 'home', label: t('nav.home'), to: '/' },
+  {
+    id: 'programs',
+    label: t('nav.programs'),
+    type: 'dropdown',
+    to: '/programs',
+    overviewLabel: t('nav.allPrograms'),
+    children: [
+      { label: t('programs.buildWithAi'), to: '/Leaders-build-with-ai' },
+      { label: t('programs.teachers'), to: '/education-for-teachers' },
+      { label: t('programs.communities'), to: '/support-for-communities' },
+      { label: t('programs.excel'), to: '/formation-excel' },
+    ],
+  },
+  { id: 'learn', label: t('nav.learn'), to: '/learn' },
+  { id: 'portfolio', label: t('nav.portfolio'), to: '/portfolio' },
+  { id: 'vision', label: t('nav.vision'), to: '/our-vision' },
+  { id: 'blog', label: t('nav.blog'), to: '/blog' },
+  { id: 'contact', label: t('nav.contact'), to: '/contact', highlight: true },
+])
 
 function onScroll() {
   scrolled.value = window.scrollY > 50
@@ -70,22 +95,11 @@ function closeMenu() {
         />
       </RouterLink>
 
-      <button
-        class="header__toggle"
-        :aria-expanded="menuOpen"
-        aria-label="Toggle menu"
-        @click="toggleMenu"
-      >
-        <span class="header__toggle-bar" />
-        <span class="header__toggle-bar" />
-        <span class="header__toggle-bar" />
-      </button>
-
       <nav class="header__nav" :class="{ 'header__nav--open': menuOpen }">
         <ul class="header__list">
           <li
-            v-for="item in siteData.navigation"
-            :key="item.label"
+            v-for="item in navigation"
+            :key="item.id"
             class="header__item"
             :class="{ 'header__item--dropdown': item.type === 'dropdown' }"
           >
@@ -93,9 +107,9 @@ function closeMenu() {
               <button
                 type="button"
                 class="header__link header__link--dropdown"
-                :class="{ 'header__link--active': openDropdown === item.label }"
-                :aria-expanded="openDropdown === item.label"
-                @click="toggleDropdown(item.label)"
+                :class="{ 'header__link--active': openDropdown === item.id }"
+                :aria-expanded="openDropdown === item.id"
+                @click="toggleDropdown(item.id)"
               >
                 {{ item.label }}
                 <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true">
@@ -104,7 +118,7 @@ function closeMenu() {
               </button>
               <ul
                 class="header__dropdown"
-                :class="{ 'header__dropdown--open': openDropdown === item.label }"
+                :class="{ 'header__dropdown--open': openDropdown === item.id }"
               >
                 <li v-if="item.to">
                   <RouterLink :to="item.to" class="header__dropdown-link" @click="closeMenu">
@@ -131,6 +145,21 @@ function closeMenu() {
           </li>
         </ul>
       </nav>
+
+      <div class="header__actions">
+        <LanguageSwitcher />
+
+        <button
+          class="header__toggle"
+          :aria-expanded="menuOpen"
+          aria-label="Toggle menu"
+          @click="toggleMenu"
+        >
+          <span class="header__toggle-bar" />
+          <span class="header__toggle-bar" />
+          <span class="header__toggle-bar" />
+        </button>
+      </div>
     </div>
   </header>
 </template>
@@ -155,12 +184,14 @@ function closeMenu() {
 .header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 100%;
+  gap: 1rem;
 }
 
 .header__logo {
   transition: opacity var(--transition);
+  flex-shrink: 0;
 }
 
 .header__logo:hover {
@@ -188,6 +219,17 @@ function closeMenu() {
   height: 2px;
   background: var(--color-white);
   transition: transform var(--transition);
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.header__nav {
+  margin-left: auto;
 }
 
 .header--open .header__toggle-bar:nth-child(1) {
@@ -286,6 +328,14 @@ button.header__link {
 }
 
 @media (max-width: 900px) {
+  .header__inner {
+    gap: 0.75rem;
+  }
+
+  .header__actions {
+    gap: 0.5rem;
+  }
+
   .header__toggle {
     display: flex;
   }
@@ -340,6 +390,10 @@ button.header__link {
 
   .header__dropdown--open {
     display: block;
+  }
+
+  .header__actions :deep(.language-switcher__button) {
+    padding-inline: 0.7rem;
   }
 }
 </style>

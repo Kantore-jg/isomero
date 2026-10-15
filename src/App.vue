@@ -1,7 +1,17 @@
 <script setup>
+import { watchEffect } from 'vue'
 import AppHeader from '@/components/AppHeader.vue'
 import AppFooter from '@/components/AppFooter.vue'
 import WhatsAppButton from '@/components/WhatsAppButton.vue'
+import { useLocale } from '@/composables/useLocale.js'
+
+const { locale } = useLocale()
+
+watchEffect(() => {
+  if (typeof document !== 'undefined') {
+    document.documentElement.lang = locale.value
+  }
+})
 </script>
 
 <template>

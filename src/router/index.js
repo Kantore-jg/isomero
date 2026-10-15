@@ -89,6 +89,13 @@ const routes = [
     props: { slug: 'formation-excel' },
     meta: { title: 'support communitie excel formation' },
   },
+  {
+    path: '/videos',
+    name: 'videos',
+    component: () => import('@/views/ProgramView.vue'),
+    props: { slug: 'videos' },
+    meta: { title: 'Videos' },
+  }
 
 ]
 
