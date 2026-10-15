@@ -291,14 +291,16 @@ button.header__link {
   padding: 0.75rem 0;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(8px);
-  transition: all var(--transition);
+  /* Invisible hover bridge so the cursor can reach the last items
+     without falling through the gap under the Programs button */
+  padding-top: calc(0.75rem + 8px);
+  margin-top: -8px;
+  transition: opacity var(--transition), visibility var(--transition);
 }
 
 .header__dropdown--open {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
 }
 
 .header__item--dropdown {
@@ -310,7 +312,6 @@ button.header__link {
   .header__item--dropdown:focus-within .header__dropdown {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
   }
 }
 
@@ -383,9 +384,9 @@ button.header__link {
     position: static;
     opacity: 1;
     visibility: visible;
-    transform: none;
     display: none;
     padding: 0 0 1rem 1rem;
+    margin-top: 0;
     background: transparent;
   }
 

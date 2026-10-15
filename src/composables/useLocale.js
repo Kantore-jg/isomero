@@ -21,6 +21,7 @@ const messages = {
       teachers: 'Formation des enseignants',
       communities: 'Soutien aux communautés',
       excel: 'Formation Excel',
+      videos: 'Vidéos',
     },
     footer: {
       organization: 'The Isomero Foundation',
