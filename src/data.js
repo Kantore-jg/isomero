@@ -20,7 +20,7 @@ export const siteData = {
         { label: 'Build with AI 2026', to: '/Leaders-build-with-ai' },
         { label: 'Education for Teachers', to: '/education-for-teachers' },
         { label: 'Support for Communities', to: '/support-for-communities' },
-        { label: 'Videos', to: '/videos' },
+        { label: 'videos', to: '/videos' },
       ],
     },
     { label: 'Learn', to: '/learn' },
@@ -190,7 +190,7 @@ export const siteData = {
           },
           {
             title: 'video realization',
-            videoURL: 'https://drive.google.com/file/d/1OvkVQaRU_SfwfRJwYaUviqv8llMs_wOa/view',
+            videoURL: 'https://youtu.be/1eS_TvnwoX8',
           }
         ],
     },

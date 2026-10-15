@@ -47,6 +47,7 @@ const navigation = computed(() => [
       { label: t('programs.teachers'), to: '/education-for-teachers' },
       { label: t('programs.communities'), to: '/support-for-communities' },
       { label: t('programs.excel'), to: '/formation-excel' },
+      { label: t('programs.videos'), to: '/videos' },
     ],
   },
   { id: 'learn', label: t('nav.learn'), to: '/learn' },

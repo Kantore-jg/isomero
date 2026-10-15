@@ -25,7 +25,7 @@ function sectionHasVideo(section) {
   <div v-if="program">
     <section
       class="page-hero"
-      :style="{ backgroundImage: `url(${program.heroImage})` }"
+      :style="{ backgroundImage: `url('${program.heroImage}')` }"
     >
       <div class="container">
         <h1>{{ program.title }}</h1>
