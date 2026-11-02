@@ -1,9 +1,10 @@
+
 export const siteData = {
   site: {
     name: 'Isomero',
     tagline: "L'innovation et l'excellence en digitalisation numerique.",
     description: 'Supporting education and innovation.',
-    logo: '/ISOMERO_logo.svg',
+    logo: '/iSOMERO-01.png',
     favicon: '/favicon.svg',
     linkedin: 'https://www.linkedin.com/company/135074078/',
     whatsapp: 'https://wa.me/25767908378',
@@ -379,34 +380,13 @@ export const siteData = {
         image:
           'https://ik.imagekit.io/cy3dy3vcm/Isomero/team/team.png',
       },
-      // {
-      //   name: 'First Name Last Name',
-      //   role: 'Program Director',
-      //   bio: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
-      //   image:
-      //     'https://media.licdn.com/dms/image/v2/D5603AQGeVXGeEAcxYw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1726721792103?e=1784160000&v=beta&t=bcYGN_OaSdGdUaSuzyMCnLGFA9ZOoVhY7U46ikKQ7iQ',
-      // },
-      // {
-      //   name: 'First Name Last Name',
-      //   role: 'Community Lead',
-      //   bio: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
-      //   image:
-      //     'https://media.licdn.com/dms/image/v2/D5603AQGY7wqzMZFulg/profile-displayphoto-shrink_800_800/B56ZSSs8hLHwAg-/0/1737628044457?e=1784160000&v=beta&t=mw8CDyxIbFpG2nwCOzPpvlnGXvFM3bAJo3JXVbmjyGs',
-      // },
-      // {
-      //   name: 'First Name Last Name',
-      //   role: 'Operations Manager',
-      //   bio: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
-      //   image:
-      //     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80',
-      // },
     ],
   },
 
   blog: {
     title: 'Blog',
     heroImage:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80',
+      'https://ik.imagekit.io/cy3dy3vcm/Isomero/Blog%20background%20/InShot_20261102_104122288.jpg?updatedAt=1793609081183',
     posts: [
       {
         slug: 'blog-post-four',
@@ -446,11 +426,11 @@ export const siteData = {
       },
       {
         slug: 'blog-post-one',
-        title: 'Blog Post One',
+        title: 'want to start',
         author: 'Guest User',
         date: 'December 5, 2025',
         excerpt:
-          'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more.',
+          'It all begins with an idea. Maybe you want to launch but you are waiting for something.Start now.',
         image:
           'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80',
         content:

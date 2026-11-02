@@ -11,10 +11,9 @@ const { blog } = siteData
       :style="{ backgroundImage: `url(${blog.heroImage})` }"
     >
       <div class="container">
-        <h1>{{ blog.title }}</h1>
+        <h1>{{ blog.title }}</h1>     <p class="blog__youtube">Découvrez notre chaîne YouTube : <a href="https://youtube.com/@isomerobi7703?si=k-3MvM0x90qAAg2w">Isomero Bi Technologies</a></p>
       </div>
     </section>
-
     <section class="section section--white">
       <div class="container">
         <div class="blog__grid">
@@ -36,6 +35,22 @@ const { blog } = siteData
 </template>
 
 <style scoped>
+.blog__youtube {
+  color:white;
+  text-align: center;
+}
+
+.blog__youtube a {
+  color: #824dff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog__youtube a:hover {
+  color: #ff8585;
+}
+
 .blog__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
