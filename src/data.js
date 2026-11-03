@@ -1,7 +1,7 @@
 
 export const siteData = {
   site: {
-    name: 'Isomero',
+    name: 'Isomero Bi Technologies',
     tagline: "L'innovation et l'excellence en digitalisation numerique.",
     description: 'Supporting education and innovation.',
     logo: '/iSOMERO-01.png',

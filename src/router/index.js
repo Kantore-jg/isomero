@@ -6,7 +6,7 @@ const routes = [
     path: '/',
     name: 'home',
     component: () => import('@/views/HomeView.vue'),
-    meta: { title: siteData.site.name },
+    meta: { title: 'home' },
   },
   {
     path: '/programs',
@@ -109,7 +109,7 @@ const router = createRouter({
 
 router.afterEach((to) => {
   const title = to.meta.title
-  document.title = title ? `${title} — ${siteData.site.name}` : siteData.site.name
+  document.title = title ? `${title}  ${siteData.site.name}` : siteData.site.name
 })
 
 export default router
