@@ -47,7 +47,7 @@ export const siteData = {
     editorial: {
       theme: 'light',
       title: 'Supporting education and innovation.',
-      text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      text: 'At iSomero Bi Technologies, we believe that education and technology are powerful drivers of progress. We are committed to empowering individuals, businesses, and communities through innovative digital solutions, practical technology skills, and accessible learning opportunities. Our mission is to bridge the digital divide, inspire creativity, and build a smarter, more connected future for Burundi and beyond.',
       image:
         'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1200&q=80',
       imageAlt: 'Students in classroom',
