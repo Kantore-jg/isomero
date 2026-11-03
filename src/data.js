@@ -363,7 +363,9 @@ export const siteData = {
         { name: 'message', label: 'Message', type: 'textarea', required: true },
       ],
       submitLabel: 'Send Message',
-      successMessage: 'Your email draft has been prepared.',
+      sendingLabel: 'Sending…',
+      successMessage: 'Thank you for reaching out!',
+      errorMessage: 'Sorry, we could not send your message. Please try again.',
     },
   },
 

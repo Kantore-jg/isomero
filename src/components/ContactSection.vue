@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref } from 'vue'
+import { useFormspree } from '@/composables/useFormspree.js'
 
 const props = defineProps({
   title: { type: String, required: true },
@@ -11,15 +11,12 @@ const props = defineProps({
   theme: { type: String, default: 'light' },
 })
 
-const formData = reactive({})
-const submitted = ref(false)
-
-props.form.fields.forEach((field) => {
-  formData[field.name] = ''
+const { formData, status, errorMessage, submit } = useFormspree(props.form.fields, {
+  error: props.form.errorMessage,
 })
 
-function handleSubmit() {
-  submitted.value = true
+async function handleSubmit() {
+  await submit()
 }
 </script>
 
@@ -46,27 +43,36 @@ function handleSubmit() {
       </div>
 
       <form class="contact__form" @submit.prevent="handleSubmit">
-        <p v-if="submitted" class="contact__success">{{ form.successMessage }}</p>
-        <template v-else>
-          <div v-for="field in form.fields" :key="field.name" class="contact__field">
-            <label :for="field.name">{{ field.label }}</label>
-            <textarea
-              v-if="field.type === 'textarea'"
-              :id="field.name"
-              v-model="formData[field.name]"
-              :required="field.required"
-              rows="5"
-            />
-            <input
-              v-else
-              :id="field.name"
-              v-model="formData[field.name]"
-              :type="field.type"
-              :required="field.required"
-            />
-          </div>
-          <button type="submit" class="btn btn--primary">{{ form.submitLabel }}</button>
-        </template>
+        <p v-if="status === 'success'" class="contact__success" role="status">
+          {{ form.successMessage }}
+        </p>
+        <p v-else-if="status === 'error'" class="contact__error" role="alert">
+          {{ errorMessage || form.errorMessage }}
+        </p>
+
+        <div v-for="field in form.fields" :key="field.name" class="contact__field">
+          <label :for="`section-${field.name}`">{{ field.label }}</label>
+          <textarea
+            v-if="field.type === 'textarea'"
+            :id="`section-${field.name}`"
+            v-model="formData[field.name]"
+            :required="field.required"
+            :disabled="status === 'submitting'"
+            rows="5"
+          />
+          <input
+            v-else
+            :id="`section-${field.name}`"
+            v-model="formData[field.name]"
+            :type="field.type"
+            :name="field.name"
+            :required="field.required"
+            :disabled="status === 'submitting'"
+          />
+        </div>
+        <button type="submit" class="btn btn--primary" :disabled="status === 'submitting'">
+          {{ status === 'submitting' ? form.sendingLabel || 'Sending…' : form.submitLabel }}
+        </button>
       </form>
     </div>
   </section>
@@ -139,17 +145,33 @@ function handleSubmit() {
   transition: border-color var(--transition);
 }
 
+.contact__field input:disabled,
+.contact__field textarea:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 .contact__field input:focus,
 .contact__field textarea:focus {
   outline: none;
   border-color: var(--color-accent);
 }
 
-.contact__success {
-  padding: 1.5rem;
-  background: rgba(163, 130, 108, 0.15);
-  color: var(--color-accent);
+.contact__success,
+.contact__error {
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
   font-weight: 500;
+}
+
+.contact__success {
+  background: rgba(46, 125, 50, 0.1);
+  color: #1b5e20;
+}
+
+.contact__error {
+  background: rgba(183, 28, 28, 0.08);
+  color: #8a1c1c;
 }
 
 @media (max-width: 768px) {

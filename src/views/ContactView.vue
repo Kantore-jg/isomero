@@ -1,35 +1,14 @@
 <script setup>
-import { reactive } from 'vue'
 import { siteData } from '@/data.js'
+import { useFormspree } from '@/composables/useFormspree.js'
 
 const { contactPage } = siteData
+const { formData, status, errorMessage, submit } = useFormspree(contactPage.form.fields, {
+  error: contactPage.form.errorMessage,
+})
 
-const formData = reactive(
-  contactPage.form.fields.reduce((acc, field) => {
-    acc[field.name] = ''
-    return acc
-  }, {}),
-)
-
-function buildMailtoLink() {
-  const subject = formData.subject || 'Message from Isomero website'
-  const bodyLines = [
-    `Name: ${formData.name}`,
-    `Email: ${formData.email}`,
-    '',
-    formData.message,
-  ]
-
-  const params = new URLSearchParams({
-    subject,
-    body: bodyLines.join('\n'),
-  })
-
-  return `mailto:${contactPage.email}?${params.toString()}`
-}
-
-function handleSubmit() {
-  window.location.href = buildMailtoLink()
+async function handleSubmit() {
+  await submit()
 }
 </script>
 
@@ -62,6 +41,13 @@ function handleSubmit() {
         </aside>
 
         <form class="contact-form" @submit.prevent="handleSubmit">
+          <p v-if="status === 'success'" class="contact-form__success" role="status">
+            {{ contactPage.form.successMessage }}
+          </p>
+          <p v-else-if="status === 'error'" class="contact-form__error" role="alert">
+            {{ errorMessage || contactPage.form.errorMessage }}
+          </p>
+
           <div class="contact-form__grid">
             <div v-for="field in contactPage.form.fields" :key="field.name" class="contact-form__field">
               <label :for="field.name">{{ field.label }}</label>
@@ -70,6 +56,7 @@ function handleSubmit() {
                 :id="field.name"
                 v-model="formData[field.name]"
                 :required="field.required"
+                :disabled="status === 'submitting'"
                 rows="7"
               />
               <input
@@ -77,14 +64,19 @@ function handleSubmit() {
                 :id="field.name"
                 v-model="formData[field.name]"
                 :type="field.type"
+                :name="field.name"
                 :required="field.required"
+                :disabled="status === 'submitting'"
               />
             </div>
           </div>
 
-
-          <button type="submit" class="btn btn--primary contact-form__submit">
-            {{ contactPage.form.submitLabel }}
+          <button
+            type="submit"
+            class="btn btn--primary contact-form__submit"
+            :disabled="status === 'submitting'"
+          >
+            {{ status === 'submitting' ? contactPage.form.sendingLabel : contactPage.form.submitLabel }}
           </button>
         </form>
       </div>
@@ -216,20 +208,44 @@ function handleSubmit() {
   transition: border-color var(--transition);
 }
 
+.contact-form__field input:disabled,
+.contact-form__field textarea:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 .contact-form__field input:focus,
 .contact-form__field textarea:focus {
   outline: none;
   border-color: var(--color-accent);
 }
 
-.contact-form__note {
-  margin: 1rem 0 1.25rem;
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
+.contact-form__success,
+.contact-form__error {
+  margin: 0 0 1rem;
+  padding: 0.9rem 1rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.contact-form__success {
+  background: rgba(46, 125, 50, 0.1);
+  color: #1b5e20;
+}
+
+.contact-form__error {
+  background: rgba(183, 28, 28, 0.08);
+  color: #8a1c1c;
 }
 
 .contact-form__submit {
   width: 100%;
+  margin-top: 1rem;
+}
+
+.contact-form__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 @media (max-width: 900px) {
