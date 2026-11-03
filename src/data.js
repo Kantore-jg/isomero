@@ -269,7 +269,7 @@ export const siteData = {
     title: 'Learn',
     heroImage:
       'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600&q=80',
-    heroTitle: 'Advanced Academy',
+    heroTitle: 'iSomero Academy',
     heroSubtitle:
       'Welcome to our learning hub, where we share insights, articles, and courses to help you stay ahead in the tech world.',
     items: [
@@ -281,7 +281,24 @@ export const siteData = {
           'Why they matter, when to choose them, and what they can do for your next project.',
         image:
           'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=900&q=80',
-        cta: { label: 'Read More', to: '/blog' },
+        cta: { label: 'Read More', to: '/learn/learn-post-one' },
+        intro:
+          'This learning track helps beginners and young developers understand which languages dominate the market today, and how Isomero uses them in real projects and training sessions.',
+        sections: [
+          {
+            title: 'What you will learn',
+            text: 'We cover Python, JavaScript, Java, TypeScript, and SQL with practical examples drawn from school projects, community workshops, and client work.',
+          },
+          {
+            title: 'Why these languages',
+            text: 'Each language has a clear role: web interfaces, backend services, automation, mobile foundations, and data workflows. Choosing well saves time and makes teams more productive.',
+          },
+          {
+            title: 'How the program works',
+            text: 'Learners move from concepts to small builds: scripts, simple APIs, and interactive pages. Mentors from Isomero guide the practice so theory becomes useful skill.',
+          },
+        ],
+        relatedCta: { label: 'Join Build with AI 2026', to: '/Leaders-build-with-ai' },
       },
       {
         slug: 'learn-post-two',
@@ -291,7 +308,24 @@ export const siteData = {
           'How collaboration helps teams ship better products and learn faster in the process.',
         image:
           'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80',
-        cta: { label: 'Read More', to: '/blog' },
+        cta: { label: 'Read More', to: '/learn/learn-post-two' },
+        intro:
+          'Team coding is at the heart of Isomero’s learning method. Students and professionals grow faster when they build together, review each other’s work, and share responsibility.',
+        sections: [
+          {
+            title: 'Collaboration as a skill',
+            text: 'We teach Git workflows, pair programming, code reviews, and clear communication so every participant can contribute with confidence.',
+          },
+          {
+            title: 'What the sessions look like',
+            text: 'Groups define a small product goal, divide tasks, and ship an MVP. Mentors help unblock issues and keep the focus on learning by doing.',
+          },
+          {
+            title: 'Outcomes for learners',
+            text: 'Participants leave with a shared project, stronger soft skills, and a clearer understanding of how real software teams operate.',
+          },
+        ],
+        relatedCta: { label: 'Explore Support for Communities', to: '/support-for-communities' },
       },
       {
         slug: 'learn-post-three',
@@ -301,7 +335,24 @@ export const siteData = {
           'A simple breakdown of how centralized tools improve coordination, reporting, and growth.',
         image:
           'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=900&q=80',
-        cta: { label: 'Read More', to: '/blog' },
+        cta: { label: 'Read More', to: '/learn/learn-post-three' },
+        intro:
+          'This program introduces ERP thinking for local businesses and organizations that want better control of stock, sales, finance, and reporting in one place.',
+        sections: [
+          {
+            title: 'The business problem',
+            text: 'Many teams still manage operations with scattered spreadsheets and WhatsApp messages. That creates delays, errors, and weak visibility for decision makers.',
+          },
+          {
+            title: 'What ERP changes',
+            text: 'A centralized system connects customers, inventory, invoices, and reports. Managers get a clearer picture, and teams spend less time chasing information.',
+          },
+          {
+            title: 'How Isomero supports you',
+            text: 'We explain the core modules, map your current process, and train your team so digital tools fit the way you already work — then improve it step by step.',
+          },
+        ],
+        relatedCta: { label: 'Contact us about ERP training', to: '/contact' },
       },
     ],
   },

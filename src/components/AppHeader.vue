@@ -17,6 +17,9 @@ const heroImage = computed(() => {
   if (name === 'home') return siteData.home.hero.image
   if (name === 'programs') return siteData.programsOverview.heroImage
   if (name === 'learn') return siteData.learn.heroImage
+  if (name === 'learn-post') {
+    return siteData.learn.items.find((p) => p.slug === params.slug)?.image ?? null
+  }
   if (name === 'portfolio') return siteData.portfolio.heroImage
   if (name === 'contact') return siteData.contactPage.heroImage
   if (name === 'our-vision') return siteData.vision.hero.image
