@@ -25,6 +25,10 @@ const post = computed(() => siteData.blog.posts.find((p) => p.slug === props.slu
         <p class="post__meta">{{ post.author }} &middot; {{ post.date }}</p>
         <div class="post__content">
           <p>{{ post.content }}</p>
+          <section v-for="section in post.sections" :key="section.title" class="post__section">
+            <h2>{{ section.title }}</h2>
+            <p>{{ section.text }}</p>
+          </section>
         </div>
         <RouterLink to="/blog" class="post__back">&larr; Back to Blog</RouterLink>
       </div>
@@ -47,6 +51,16 @@ const post = computed(() => siteData.blog.posts.find((p) => p.slug === props.slu
   font-size: 1.0625rem;
   line-height: 1.8;
   color: var(--color-text-muted);
+}
+
+.post__section {
+  margin-top: 2rem;
+}
+
+.post__section h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
 }
 
 .post__back {
