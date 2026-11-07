@@ -108,16 +108,7 @@ export const siteData = {
         {
           title: 'Open Resources',
           text: 'All materials we create are shared openly so schools everywhere can adapt and use them freely.',
-        },
-        {
-          title: 'Program Video',
-          videoURL: 'https://youtu.be/8x8-o5UUhow?si=nC_dp3wXw51rHBU3',
-          videoURL: 'https://ik.imagekit.io/cy3dy3vcm/Isomero/arduino/VID_20260529_152614.mp4',
-        },
-        {
-          title: 'Program Video',
-          videoURL: 'https://youtu.be/8x8-o5UUhow?si=nC_dp3wXw51rHBU3',
-        },
+        }
       ],
     },
     'education-for-teachers': {
@@ -177,7 +168,7 @@ export const siteData = {
     },
     'videos': {
       title: 'Videos realized by Isomero',
-      intro: 'programme de OAA international 30th Editions',
+      intro: 'A selection of video projects produced by Isomero Bi Technologies.',
       heroImage:
         'https://ik.imagekit.io/cy3dy3vcm/Isomero/videos/Pasted%20image%20(11).png',
         sections: [
@@ -190,9 +181,21 @@ export const siteData = {
             text: 'using tools for voice over and or dependencies to make a complete video',
           },
           {
-            title: 'video realization',
+            title: 'OAA International — 30th Edition',
             videoURL: 'https://youtu.be/1eS_TvnwoX8',
-          }
+          },
+          {
+            title: 'Femme Leader',
+            videoURL: 'https://youtu.be/-vuNC1BCowc',
+          },
+          {
+            title: 'Journée Internationale de la Femme',
+            videoURL: 'https://youtu.be/blcmZdSqhjQ',
+          },
+          {
+            title: 'Propreté dans la Ville',
+            videoURL: 'https://youtu.be/fTxLc7hAubY',
+          },
         ],
     },
   },
