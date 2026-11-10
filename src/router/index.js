@@ -21,6 +21,13 @@ const routes = [
     meta: { title: 'Learn' },
   },
   {
+    path: '/learn/:slug',
+    name: 'learn-post',
+    component: () => import('@/views/LearnPostView.vue'),
+    props: true,
+    meta: { title: 'Learn' },
+  },
+  {
     path: '/portfolio',
     name: 'portfolio',
     component: () => import('@/views/PortfolioView.vue'),
@@ -108,8 +115,14 @@ const router = createRouter({
 })
 
 router.afterEach((to) => {
+  if (to.name === 'learn-post') {
+    const item = siteData.learn.items.find((entry) => entry.slug === to.params.slug)
+    document.title = item ? `${item.title} ` : siteData.site.name
+    return
+  }
+
   const title = to.meta.title
-  document.title = title ? `${title}  ${siteData.site.name}` : siteData.site.name
+  document.title = title ? `${title}  ` : siteData.site.name
 })
 
 export default router
