@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
   items: { type: Array, required: true },
-  theme: { type: String, default: 'navy' },
+  theme: { type: String, default: 'white' },
 })
 </script>
 
@@ -47,7 +47,7 @@ defineProps({
 
 .program-card p {
   font-size: 0.9375rem;
-  color: var(--color-on-dark-muted);
+  color: var(--color-text-muted);
   margin-bottom: 1.5rem;
   line-height: 1.7;
 }

@@ -54,7 +54,7 @@ export const siteData = {
     },
 
     programs: {
-      theme: 'navy',
+      theme: 'white',
       title: 'Our Programs',
       items: [
         {
