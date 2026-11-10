@@ -32,7 +32,7 @@ function sectionHasVideo(section) {
       </div>
     </section>
 
-    <section class="section section--light">
+    <section class="section section--surface">
       <div class="container program">
         <p class="program__intro">{{ program.intro }}</p>
 

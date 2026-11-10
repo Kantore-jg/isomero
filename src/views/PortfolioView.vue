@@ -14,7 +14,7 @@ const { portfolio } = siteData
       </div>
     </section>
 
-    <section class="section section--light">
+    <section class="section section--surface">
       <div class="container">
         <div class="portfolio-grid">
           <article v-for="item in portfolio.items" :key="item.title" class="portfolio-card">
@@ -47,8 +47,8 @@ const { portfolio } = siteData
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(2, 4, 9, 0.25), rgba(2, 4, 9, 0.84)),
-    rgba(5, 10, 19, 0.3);
+    var(--overlay-hero),
+    var(--overlay-light);
 }
 
 .portfolio-hero__content {
@@ -67,7 +67,7 @@ const { portfolio } = siteData
 .portfolio-hero p {
   font-size: clamp(1rem, 1.5vw, 1.08rem);
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-on-dark);
 }
 
 .portfolio-grid {
@@ -94,11 +94,14 @@ const { portfolio } = siteData
 .portfolio-card__category {
   display: inline-flex;
   margin-bottom: 0.65rem;
+  padding: 0.3em 0.85em;
+  border-radius: 999px;
+  background: var(--color-brand-tint);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-navy);
 }
 
 .portfolio-card h2 {

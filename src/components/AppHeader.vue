@@ -173,7 +173,7 @@ function closeMenu() {
   right: 0;
   z-index: 100;
   height: var(--header-height);
-  background: var(--color-black);
+  background: var(--color-navy);
   color: var(--color-white);
   transition: background var(--transition);
 }
@@ -201,10 +201,13 @@ function closeMenu() {
 
 .header__logo-image {
   display: block;
-  width: 112px;
-  max-height: 54px;
+  width: 150px;
+  max-height: 68px;
   height: auto;
   object-fit: contain;
+  padding: 4px 8px;
+  background: var(--color-white);
+  border-radius: 6px;
 }
 
 .header__toggle {
@@ -269,17 +272,18 @@ button.header__link {
 
 .header__link:hover,
 .header__link.router-link-active {
-  color: var(--color-accent);
+  color: var(--color-brand);
 }
 
 .header__link--highlight {
   padding: 0.6em 1.4em;
-  background: var(--color-accent);
-  color: var(--color-white) !important;
+  background: var(--color-cta);
+  color: var(--color-navy) !important;
+  font-weight: 600;
 }
 
 .header__link--highlight:hover {
-  background: var(--color-accent-hover);
+  background: var(--color-cta-hover);
 }
 
 .header__dropdown {
@@ -287,7 +291,7 @@ button.header__link {
   top: 100%;
   left: 0;
   min-width: 240px;
-  background: var(--color-black);
+  background: var(--color-navy);
   padding: 0.75rem 0;
   opacity: 0;
   visibility: hidden;
@@ -325,8 +329,8 @@ button.header__link {
 }
 
 .header__dropdown-link:hover {
-  color: var(--color-accent);
-  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-brand);
+  background: var(--color-hover-on-dark);
 }
 
 @media (max-width: 900px) {
@@ -348,7 +352,7 @@ button.header__link {
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--color-black);
+    background: var(--color-navy);
     padding: 2rem var(--site-gutter);
     transform: translateX(100%);
     transition: transform var(--transition);
@@ -367,7 +371,7 @@ button.header__link {
 
   .header__item {
     width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--color-border-on-dark);
   }
 
   .header__link {
@@ -377,7 +381,8 @@ button.header__link {
   }
 
   .header__logo-image {
-    width: 92px;
+    width: 120px;
+    max-height: 60px;
   }
 
   .header__dropdown {

@@ -36,19 +36,19 @@ const { blog } = siteData
 
 <style scoped>
 .blog__youtube {
-  color:white;
+  color: var(--color-on-dark);
   text-align: center;
 }
 
 .blog__youtube a {
-  color: #824dff;
+  color: var(--color-brand);
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 .blog__youtube a:hover {
-  color: #ff8585;
+  color: var(--color-white);
 }
 
 .blog__grid {
@@ -85,7 +85,7 @@ const { blog } = siteData
 }
 
 .blog-card a:hover h2 {
-  color: var(--color-accent);
+  color: var(--color-brand);
 }
 
 .blog-card p {
@@ -100,7 +100,7 @@ const { blog } = siteData
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-brand);
 }
 
 @media (max-width: 768px) {

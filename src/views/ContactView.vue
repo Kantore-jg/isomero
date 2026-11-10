@@ -73,7 +73,7 @@ async function handleSubmit() {
 
           <button
             type="submit"
-            class="btn btn--primary contact-form__submit"
+            class="btn btn--cta contact-form__submit"
             :disabled="status === 'submitting'"
           >
             {{ status === 'submitting' ? contactPage.form.sendingLabel : contactPage.form.submitLabel }}
@@ -100,8 +100,8 @@ async function handleSubmit() {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(8, 8, 12, 0.25), rgba(8, 8, 12, 0.8)),
-    rgba(7, 8, 14, 0.34);
+    var(--overlay-hero),
+    var(--overlay-light);
 }
 
 .contact-hero__content {
@@ -119,7 +119,7 @@ async function handleSubmit() {
 .contact-hero p {
   font-size: clamp(1rem, 1.5vw, 1.08rem);
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-on-dark);
 }
 
 .contact-page__grid {
@@ -164,11 +164,12 @@ async function handleSubmit() {
 }
 
 .contact-info-card__links a:hover {
-  color: var(--color-accent);
+  color: var(--color-brand);
 }
 
 .contact-info-card--accent {
-  background: rgba(163, 130, 108, 0.08);
+  background: var(--color-surface);
+  border-top: 3px solid var(--color-brand);
 }
 
 .contact-form {
@@ -202,7 +203,7 @@ async function handleSubmit() {
   width: 100%;
   padding: 0.95rem 1rem;
   border: 1px solid var(--color-border);
-  background: #fff;
+  background: var(--color-white);
   font-family: inherit;
   font-size: 0.95rem;
   transition: border-color var(--transition);
@@ -217,7 +218,7 @@ async function handleSubmit() {
 .contact-form__field input:focus,
 .contact-form__field textarea:focus {
   outline: none;
-  border-color: var(--color-accent);
+  border-color: var(--color-brand);
 }
 
 .contact-form__success,
@@ -229,13 +230,15 @@ async function handleSubmit() {
 }
 
 .contact-form__success {
-  background: rgba(46, 125, 50, 0.1);
-  color: #1b5e20;
+  background: var(--color-brand-tint);
+  border-left: 4px solid var(--color-brand);
+  color: var(--color-navy);
 }
 
 .contact-form__error {
-  background: rgba(183, 28, 28, 0.08);
-  color: #8a1c1c;
+  background: var(--color-cta-tint);
+  border-left: 4px solid var(--color-cta);
+  color: var(--color-navy);
 }
 
 .contact-form__submit {

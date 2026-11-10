@@ -4,7 +4,7 @@ defineProps({
   text: { type: String, required: true },
   image: { type: String, required: true },
   imageAlt: { type: String, default: '' },
-  theme: { type: String, default: 'light' },
+  theme: { type: String, default: 'surface' },
 })
 </script>
 

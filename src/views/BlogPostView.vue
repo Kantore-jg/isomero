@@ -54,7 +54,7 @@ const post = computed(() => siteData.blog.posts.find((p) => p.slug === props.slu
   margin-top: 3rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--color-accent);
+  color: var(--color-brand);
   transition: opacity var(--transition);
 }
 

@@ -29,7 +29,7 @@ const { vision } = siteData
           </footer>
         </blockquote>
 
-        <RouterLink :to="vision.cta.to" class="btn btn--primary">
+        <RouterLink :to="vision.cta.to" class="btn btn--cta">
           {{ vision.cta.label }}
         </RouterLink>
       </div>

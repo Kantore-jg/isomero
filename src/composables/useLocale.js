@@ -26,6 +26,10 @@ const messages = {
     footer: {
       organization: 'The Isomero Foundation',
       location: 'Rohero, No 13',
+      quickMenu: 'Menu rapide',
+      ourPrograms: 'Nos programmes',
+      getInTouch: 'Contactez-nous',
+      rights: 'Tous droits réservés.',
     },
   },
   en: {
@@ -50,6 +54,10 @@ const messages = {
     footer: {
       organization: 'The Isomero Foundation',
       location: 'Rohero, No 13',
+      quickMenu: 'Quick menu',
+      ourPrograms: 'Our programs',
+      getInTouch: 'Get in touch',
+      rights: 'All rights reserved.',
     },
   },
 }

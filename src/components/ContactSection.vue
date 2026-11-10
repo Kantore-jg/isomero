@@ -70,7 +70,7 @@ async function handleSubmit() {
             :disabled="status === 'submitting'"
           />
         </div>
-        <button type="submit" class="btn btn--primary" :disabled="status === 'submitting'">
+        <button type="submit" class="btn btn--cta" :disabled="status === 'submitting'">
           {{ status === 'submitting' ? form.sendingLabel || 'Sending…' : form.submitLabel }}
         </button>
       </form>
@@ -107,7 +107,7 @@ async function handleSubmit() {
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-brand);
   margin-bottom: 0.25rem;
 }
 
@@ -116,7 +116,7 @@ async function handleSubmit() {
 }
 
 .contact__detail a:hover {
-  color: var(--color-accent);
+  color: var(--color-brand);
 }
 
 .contact__detail p {
@@ -154,7 +154,7 @@ async function handleSubmit() {
 .contact__field input:focus,
 .contact__field textarea:focus {
   outline: none;
-  border-color: var(--color-accent);
+  border-color: var(--color-brand);
 }
 
 .contact__success,
@@ -165,13 +165,15 @@ async function handleSubmit() {
 }
 
 .contact__success {
-  background: rgba(46, 125, 50, 0.1);
-  color: #1b5e20;
+  background: var(--color-brand-tint);
+  border-left: 4px solid var(--color-brand);
+  color: var(--color-navy);
 }
 
 .contact__error {
-  background: rgba(183, 28, 28, 0.08);
-  color: #8a1c1c;
+  background: var(--color-cta-tint);
+  border-left: 4px solid var(--color-cta);
+  color: var(--color-navy);
 }
 
 @media (max-width: 768px) {

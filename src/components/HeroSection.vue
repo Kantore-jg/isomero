@@ -24,7 +24,7 @@ defineProps({
         <RouterLink
           v-if="primaryCta"
           :to="primaryCta.to"
-          class="btn btn--primary hero__cta hero__cta--primary"
+          class="btn btn--cta hero__cta hero__cta--primary"
         >
           {{ primaryCta.label }}
         </RouterLink>
@@ -61,7 +61,7 @@ defineProps({
   color: var(--color-white);
   overflow: hidden;
   padding-top: var(--header-height);
-  background: #050505;
+  background: var(--color-navy);
 }
 
 .hero__bg {
@@ -76,8 +76,8 @@ defineProps({
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0.55) 45%, rgba(0, 0, 0, 0.92) 100%),
-    radial-gradient(circle at center, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.48) 70%);
+    linear-gradient(to bottom, var(--overlay-light) 0%, var(--overlay-mid) 45%, var(--overlay-strong) 100%),
+    radial-gradient(circle at center, transparent 0%, var(--overlay-mid) 70%);
 }
 
 .hero__glow {
@@ -92,13 +92,13 @@ defineProps({
 .hero__glow--left {
   left: -8rem;
   top: 20%;
-  background: rgba(0, 123, 255, 0.65);
+  background: var(--color-brand);
 }
 
 .hero__glow--right {
   right: -10rem;
   bottom: -6rem;
-  background: rgba(163, 130, 108, 0.7);
+  background: var(--color-cta);
 }
 
 .hero__content {
@@ -124,7 +124,7 @@ defineProps({
   font-weight: 600;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--color-on-dark-muted);
 }
 
 .hero__subtitle {
@@ -132,7 +132,7 @@ defineProps({
   margin: 1.5rem auto 0;
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-on-dark);
 }
 
 .hero__actions {
@@ -149,7 +149,7 @@ defineProps({
 }
 
 .hero__cta--secondary {
-  border-color: rgba(255, 255, 255, 0.78);
+  border-color: var(--color-on-dark);
   color: var(--color-white);
 }
 
@@ -167,14 +167,14 @@ defineProps({
   min-width: 92px;
   padding: 0.55rem 0.9rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(8, 8, 8, 0.58);
-  color: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--color-border-on-dark);
+  background: var(--overlay-mid);
+  color: var(--color-on-dark);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24);
+  box-shadow: var(--shadow-md);
 }
 </style>

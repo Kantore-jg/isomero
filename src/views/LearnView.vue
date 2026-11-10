@@ -52,8 +52,8 @@ const { learn } = siteData
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(10, 10, 18, 0.35), rgba(10, 10, 18, 0.82)),
-    rgba(9, 11, 22, 0.45);
+    var(--overlay-hero),
+    var(--overlay-light);
 }
 
 .learn-hero__content {
@@ -74,7 +74,7 @@ const { learn } = siteData
   margin: 0 auto;
   font-size: clamp(1rem, 1.7vw, 1.1rem);
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-on-dark);
 }
 
 .learn-grid {
@@ -93,7 +93,7 @@ const { learn } = siteData
   aspect-ratio: 4 / 3;
   object-fit: cover;
   margin-bottom: 1rem;
-  background: #f3f3f3;
+  background: var(--color-surface);
 }
 
 .learn-card__body h2 {
@@ -125,9 +125,9 @@ const { learn } = siteData
 }
 
 .learn-card__cta:hover {
-  color: var(--color-white);
-  background: var(--color-accent);
-  border-color: var(--color-accent);
+  color: var(--color-navy);
+  background: var(--color-brand);
+  border-color: var(--color-brand);
 }
 
 @media (max-width: 960px) {

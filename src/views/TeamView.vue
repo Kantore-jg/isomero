@@ -16,7 +16,7 @@ const { team } = siteData
       </div>
     </section>
 
-    <section class="section section--light">
+    <section class="section section--surface">
       <div class="container">
         <div class="team__grid">
           <article v-for="member in team.members" :key="member.name" class="team-card">
@@ -35,7 +35,7 @@ const { team } = siteData
 
 <style scoped>
 .team-hero__intro {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-on-dark);
   max-width: 500px;
   margin-top: 1rem;
   font-size: 1.125rem;
@@ -62,7 +62,7 @@ const { team } = siteData
 .team-card__role {
   display: block;
   font-size: 0.8125rem;
-  color: var(--color-accent);
+  color: var(--color-brand);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 0.75rem;

@@ -44,7 +44,7 @@ const source = computed(() => resolveVideoSource(props.url))
   width: 100%;
   max-width: 800px;
   margin-top: 1rem;
-  background: #000;
+  background: var(--color-navy);
   border-radius: 4px;
   overflow: hidden;
 }

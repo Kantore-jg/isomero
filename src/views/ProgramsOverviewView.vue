@@ -67,7 +67,7 @@ const { programsOverview } = siteData
 }
 
 .program-card:hover h3 {
-  color: var(--color-accent);
+  color: var(--color-brand);
 }
 
 @media (max-width: 768px) {

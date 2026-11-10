@@ -1,13 +1,40 @@
 :root {
-  --color-accent: #a3826c;
-  --color-accent-hover: #8f6f5b;
-  --color-light: #efefee;
-  --color-dark: #3e3d3d;
-  --color-black: #0e0e0e;
-  --color-white: #ffffff;
-  --color-text: #272727;
-  --color-text-muted: #666666;
-  --color-border: #e4e4e4;
+  /* ── iSomero 4-color system ──────────────────────────────
+     60%  --color-bg / --color-surface   page + card backgrounds
+     30%  --color-navy                   text, header, footer
+     10%  --color-brand                  links, icons, active states, pills
+     10%  --color-cta                    primary CTAs, alerts, progress only
+     Every other value below is derived from these five.
+     Do not add hex/rgba values anywhere else (npm run check:colors). */
+  --color-bg: #FFFFFF;
+  --color-surface: #F8FAFC;
+  --color-navy: #112233;
+  --color-brand: #2699B6;
+  --color-cta: #FF8800;
+
+  /* Derived — text */
+  --color-white: var(--color-bg);
+  --color-text: var(--color-navy);
+  --color-text-muted: color-mix(in srgb, var(--color-navy) 72%, transparent);
+  --color-on-dark: color-mix(in srgb, var(--color-bg) 90%, transparent);
+  --color-on-dark-muted: color-mix(in srgb, var(--color-bg) 70%, transparent);
+
+  /* Derived — lines, tints, interaction */
+  --color-border: color-mix(in srgb, var(--color-navy) 12%, var(--color-bg));
+  --color-border-on-dark: color-mix(in srgb, var(--color-bg) 15%, transparent);
+  --color-hover-on-dark: color-mix(in srgb, var(--color-bg) 6%, transparent);
+  --color-brand-tint: color-mix(in srgb, var(--color-brand) 12%, var(--color-bg));
+  --color-cta-tint: color-mix(in srgb, var(--color-cta) 14%, var(--color-bg));
+  --color-brand-hover: color-mix(in srgb, var(--color-brand) 85%, var(--color-navy));
+  --color-cta-hover: color-mix(in srgb, var(--color-cta) 88%, var(--color-navy));
+
+  /* Derived — shadows and photo overlays (navy-tinted, never pure black) */
+  --shadow-sm: 0 6px 16px color-mix(in srgb, var(--color-navy) 8%, transparent);
+  --shadow-md: 0 12px 28px color-mix(in srgb, var(--color-navy) 14%, transparent);
+  --overlay-light: color-mix(in srgb, var(--color-navy) 25%, transparent);
+  --overlay-mid: color-mix(in srgb, var(--color-navy) 50%, transparent);
+  --overlay-strong: color-mix(in srgb, var(--color-navy) 88%, transparent);
+  --overlay-hero: linear-gradient(to bottom, var(--overlay-light), var(--overlay-strong));
 
   --font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --site-max-width: 1500px;
@@ -34,7 +61,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-text);
-  background: var(--color-white);
+  background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -79,23 +106,18 @@ h4 {
   padding: clamp(64px, 10vw, 120px) 0;
 }
 
-.section--black {
-  background: #5E0006;
+.section--navy {
+  background: var(--color-navy);
   color: var(--color-white);
 }
 
-.section--dark {
-  background: var(--color-dark);
-  color: var(--color-white);
-}
-
-.section--light {
-  background: var(--color-light);
+.section--surface {
+  background: var(--color-surface);
   color: var(--color-text);
 }
 
 .section--white {
-  background: var(--color-white);
+  background: var(--color-bg);
   color: var(--color-text);
 }
 
@@ -111,15 +133,31 @@ h4 {
   transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 
-.btn--primary {
-  background: var(--color-accent);
-  color: var(--color-white);
+/* Primary conversion action — orange, reserved for "Enroll", "Contact Us", "Send" etc.
+   Navy text: white on #FF8800 is only 2.4:1, navy is 6.8:1. */
+.btn--cta {
+  background: var(--color-cta);
+  color: var(--color-navy);
+  font-weight: 600;
 }
 
-.btn--primary:hover {
-  background: var(--color-accent-hover);
+.btn--cta:hover {
+  background: var(--color-cta-hover);
 }
 
+/* Secondary action — turquoise outline; text inherits navy or white from the section. */
+.btn--secondary {
+  background: transparent;
+  color: inherit;
+  border: 2px solid var(--color-brand);
+}
+
+.btn--secondary:hover {
+  background: var(--color-brand);
+  color: var(--color-navy);
+}
+
+/* Ghost button on photo or navy backgrounds. */
 .btn--outline {
   background: transparent;
   color: var(--color-white);
@@ -128,13 +166,53 @@ h4 {
 
 .btn--outline:hover {
   background: var(--color-white);
-  color: var(--color-black);
+  color: var(--color-navy);
 }
 
-.btn--dark {
-  background: var(--color-accent);
-  color: var(--color-white);
+/* Category pill */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3em 0.85em;
+  border-radius: 999px;
+  background: var(--color-brand-tint);
+  color: var(--color-navy);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
+
+/* Inline text links inside content */
+.link {
+  color: var(--color-brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition);
+}
+
+.link:hover {
+  color: var(--color-brand-hover);
+}
+
+/* Form feedback */
+.alert {
+  padding: 1rem 1.25rem;
+  border-left: 4px solid;
+  color: var(--color-navy);
+  font-weight: 500;
+}
+
+.alert--success {
+  background: var(--color-brand-tint);
+  border-color: var(--color-brand);
+}
+
+.alert--error {
+  background: var(--color-cta-tint);
+  border-color: var(--color-cta);
+}
+
 .section-title {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 500;
@@ -147,9 +225,8 @@ h4 {
   max-width: 600px;
 } 
 
-.section--dark .section-text,
-.section--black .section-text {
-  color: rgba(255, 255, 255, 0.75);
+.section--navy .section-text {
+  color: var(--color-on-dark-muted);
 }
 
 .page-hero {
@@ -166,7 +243,7 @@ h4 {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background: linear-gradient(to top, var(--overlay-strong) 0%, var(--overlay-light) 100%);
 }
 
 .page-hero .container {

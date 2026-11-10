@@ -94,16 +94,16 @@ onBeforeUnmount(() => {
   min-height: 44px;
   padding: 0.55rem 0.9rem 0.55rem 0.8rem;
   background: var(--color-white);
-  color: var(--color-black);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: var(--color-navy);
+  border: 1px solid var(--color-border);
   border-radius: 2px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-sm);
   transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition);
 }
 
 .language-switcher__button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-md);
 }
 
 .language-switcher__flag {
@@ -112,8 +112,8 @@ onBeforeUnmount(() => {
   height: 22px;
   overflow: hidden;
   border-radius: 3px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  background: #fff;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
 }
 
 .language-switcher__flag-bar {
@@ -122,16 +122,17 @@ onBeforeUnmount(() => {
   height: 100%;
 }
 
+/* Flag colors are a deliberate exception to the brand palette. */
 .language-switcher__flag-bar--blue {
-  background: #0033a0;
+  background: #0033a0; /* palette-exception */
 }
 
 .language-switcher__flag-bar--white {
-  background: #ffffff;
+  background: #ffffff; /* palette-exception */
 }
 
 .language-switcher__flag-bar--red {
-  background: #ef3340;
+  background: #ef3340; /* palette-exception */
 }
 
 .language-switcher__label {
@@ -141,7 +142,7 @@ onBeforeUnmount(() => {
 }
 
 .language-switcher__chevron {
-  color: rgba(14, 14, 14, 0.75);
+  color: var(--color-text-muted);
   transition: transform var(--transition);
 }
 
@@ -156,9 +157,9 @@ onBeforeUnmount(() => {
   min-width: 110px;
   padding: 0.4rem;
   background: var(--color-white);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--color-border);
   border-radius: 10px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+  box-shadow: var(--shadow-md);
   z-index: 20;
 }
 
@@ -166,7 +167,7 @@ onBeforeUnmount(() => {
   width: 100%;
   padding: 0.6rem 0.75rem;
   border-radius: 8px;
-  color: var(--color-black);
+  color: var(--color-navy);
   text-align: left;
   font-size: 0.85rem;
   font-weight: 600;
@@ -175,13 +176,14 @@ onBeforeUnmount(() => {
 }
 
 .language-switcher__menu-item:hover {
-  background: rgba(163, 130, 108, 0.12);
-  color: var(--color-accent);
+  background: var(--color-brand-tint);
+  color: var(--color-navy);
 }
 
 .language-switcher__menu-item--active {
-  background: rgba(163, 130, 108, 0.16);
-  color: var(--color-accent);
+  background: var(--color-brand-tint);
+  color: var(--color-navy);
+  box-shadow: inset 3px 0 0 var(--color-brand);
 }
 
 @media (max-width: 900px) {

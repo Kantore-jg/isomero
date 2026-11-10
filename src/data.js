@@ -45,7 +45,7 @@ export const siteData = {
     },
 
     editorial: {
-      theme: 'light',
+      theme: 'surface',
       title: 'Supporting education and innovation.',
       text: 'At iSomero Bi Technologies, we believe that education and technology are powerful drivers of progress. We are committed to empowering individuals, businesses, and communities through innovative digital solutions, practical technology skills, and accessible learning opportunities. Our mission is to bridge the digital divide, inspire creativity, and build a smarter, more connected future for Burundi and beyond.',
       image:
@@ -54,7 +54,7 @@ export const siteData = {
     },
 
     programs: {
-      theme: 'dark',
+      theme: 'navy',
       title: 'Our Programs',
       items: [
         {

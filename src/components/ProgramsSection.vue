@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
   items: { type: Array, required: true },
-  theme: { type: String, default: 'dark' },
+  theme: { type: String, default: 'navy' },
 })
 </script>
 
@@ -16,7 +16,7 @@ defineProps({
           <div class="program-card__body">
             <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p>
-            <RouterLink :to="item.cta.to" class="btn btn--primary program-card__cta">
+            <RouterLink :to="item.cta.to" class="btn btn--secondary program-card__cta">
               {{ item.cta.label }}
             </RouterLink>
           </div>
@@ -47,7 +47,7 @@ defineProps({
 
 .program-card p {
   font-size: 0.9375rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-on-dark-muted);
   margin-bottom: 1.5rem;
   line-height: 1.7;
 }
